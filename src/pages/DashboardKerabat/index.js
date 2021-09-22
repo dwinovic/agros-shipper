@@ -1,12 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DashboardSection, PurchaseOrderSection } from '../../components';
+import {
+  DashboardSection,
+  LayananSection,
+  PurchaseOrderSection,
+} from '../../components';
 
 const DashboardKerabat = () => {
   return (
     <StyledDashboardKerabat>
       <DashboardSection />
       <PurchaseOrderSection />
+      <LayananSection />
+      {/* <CarouselPelayanan /> */}
     </StyledDashboardKerabat>
   );
 };

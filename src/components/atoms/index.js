@@ -6,7 +6,12 @@ import CardStatusPO from './CardStatusPO';
 import CardWrapper from './CardWrapper';
 import CardStatusMuatan from './CardStatusMuatan';
 import ItemStatusMuatan from './ItemStatusMuatan';
+import SlidePelayanan from './SlidePelayanan';
+import CarouselPelayanan from './CarouselPelayanan';
+
 export {
+  CarouselPelayanan,
+  SlidePelayanan,
   ItemStatusMuatan,
   CardWrapper,
   CardMenu,

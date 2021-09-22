@@ -75,6 +75,10 @@ const StyledMainLayout = styled.div`
     font-size: 18px;
     margin: 12px 0;
   }
+  .sub-heading {
+    font-size: 18px;
+    color: #000000;
+  }
   .heading-card-md {
     font-size: 28px;
   }
