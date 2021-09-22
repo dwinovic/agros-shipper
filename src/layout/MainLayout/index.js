@@ -14,7 +14,7 @@ const MainLayout = ({ children }) => {
 };
 
 MainLayout.propTypes = {
-  children: PropTypes.elementType,
+  children: PropTypes.object,
 };
 
 const StyledMainLayout = styled.div`

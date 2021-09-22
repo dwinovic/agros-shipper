@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { ICProfile, ICSetting } from '../../../assets';
-import { CardWrapper } from '..';
+import { CardWrapper } from '../../atoms';
 
 const CardProfileCompany = (props) => {
   const { companyName, phone, email } = props;
@@ -11,12 +11,12 @@ const CardProfileCompany = (props) => {
       <CardWrapper className="content">
         <div className="header">
           <img src={ICProfile} alt="profile icon" />
-          <div className="setting hover">
+          <div className="setting">
             Pengaturan
             <img src={ICSetting} alt="profile icon" />
           </div>
         </div>
-        <div className="body hover">
+        <div className="body">
           <h4 className="heading-card-md">{companyName}</h4>
         </div>
         <div className="footer">

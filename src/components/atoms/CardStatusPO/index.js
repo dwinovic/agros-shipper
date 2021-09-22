@@ -55,9 +55,9 @@ const CardStatusPO = ({ status, theme, totalItem }) => {
               d="M5.13799 8.22406H10.006L8.08399 10.1451L8.39999 10.4611L10.861 8.00006L8.39999 5.53906L8.08399 5.85506L10.006 7.77706L5.13799 7.77706V8.22406Z"
               fill="white"
               stroke="white"
-              stroke-width="0.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="0.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </div>

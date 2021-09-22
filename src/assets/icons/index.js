@@ -12,8 +12,14 @@ import ICAnchor from './anchor.svg';
 import ICPaperCheck from './paper-check.svg';
 import ICPaperOrange from './paper-orange.svg';
 import ICBtnNext from './next.svg';
+import ICMessagerGreen from './messager.svg';
+import ICNavMessagerGreen from './green-messeger.svg';
+import ICPayGreen from './pay.svg';
 
 export {
+  ICMessagerGreen,
+  ICNavMessagerGreen,
+  ICPayGreen,
   ICBtnNext,
   ICPaperCheck,
   ICPaperOrange,

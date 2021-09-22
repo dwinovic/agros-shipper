@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CardAddPurchaseOrder, CardProfileCompany, CardStatusPO } from '../..';
+import {
+  CardAddPurchaseOrder,
+  CardMenu,
+  CardProfileCompany,
+  CardStatusPO,
+} from '../..';
 
 const DashboardSection = () => {
   return (
@@ -12,14 +17,14 @@ const DashboardSection = () => {
       </div>
       <div className="menu-dashboard">
         <div className="row">
-          <div className="medium">
+          <div className="medium35">
             <CardProfileCompany
               companyName="PT. ANTAR GLOBAL PROSPERO"
               phone="(31) 3974550"
               email="Antarglobalprospero@gmail.com"
             />
           </div>
-          <div className="medium">
+          <div className="medium35">
             <CardAddPurchaseOrder />
           </div>
           <div className="small">
@@ -27,6 +32,33 @@ const DashboardSection = () => {
           </div>
           <div className="small">
             <CardStatusPO status="Sisa" theme="orange" totalItem={10} />
+          </div>
+        </div>
+        <div className="row">
+          <div className="medium25">
+            <CardMenu
+              title="Messenger"
+              onClick={() => {
+                //link menuju messager
+              }}
+            />
+          </div>
+          <div className="medium25">
+            <CardMenu
+              title="Pay"
+              onClick={() => {
+                //link menuju payment
+              }}
+            />
+          </div>
+          <div className="large">
+            <CardMenu
+              withImage
+              title="Kritik dan Saran"
+              onClick={() => {
+                //link menuju kritik dan saran
+              }}
+            />
           </div>
         </div>
       </div>
@@ -54,15 +86,29 @@ const StyledDashboardSection = styled.section`
     }
   }
   .menu-dashboard {
+    background-color: cyan;
+    width: 100%;
     .row {
       display: flex;
       gap: 1rem;
       align-items: stretch;
-      .medium {
-        width: 35%;
-      }
+      margin-bottom: 20px;
+      width: 100%;
       .small {
         width: 15%;
+      }
+      .medium25 {
+        width: 25%;
+        background-color: yellow;
+      }
+      .medium35 {
+        width: 30%;
+        flex: 1;
+      }
+      .large {
+        background-color: pink;
+        flex: 1;
+        width: 0;
       }
     }
   }

@@ -8,7 +8,7 @@ const CardWrapper = ({ children, className }) => {
   );
 };
 CardWrapper.propTypes = {
-  children: PropTypes.elementType,
+  children: PropTypes.array,
   className: PropTypes.string,
 };
 const StyledCardWrapper = styled.div`
