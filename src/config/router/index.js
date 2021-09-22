@@ -1,10 +1,12 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import DashboardKerabat from '../../pages/DashboardKerabat';
+import PrivateRoute from './PrivateRoute';
 
 const Routes = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" component />
+        <PrivateRoute path="/" component={DashboardKerabat} />
       </Switch>
     </Router>
   );
