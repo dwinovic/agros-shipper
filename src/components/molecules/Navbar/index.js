@@ -18,27 +18,30 @@ const Navbar = ({ className }) => {
   return (
     <StyledNavbar>
       <div className={`content ${className}`}>
-        <div className="logo-brand">
+        <div className="logo-brand hover">
           <img src={ICLogoAgros} alt="Agros Shipper Company" />
           <p className="sub-name">SHIPPER</p>
         </div>
         <div className="navigation-wrapper">
           <div className="button-icons">
-            <div className="icon">
+            <div className="icon hover">
               <img src={ICNavHome} alt="Home" />
             </div>
-            <div className="icon">
+            <div className="icon hover">
               <img src={ICNavHistory} alt="History" />
             </div>
-            <div className="icon">
+            <div className="icon hover">
               <img src={ICNavMessage} alt="Message" />
             </div>
-            <div className="icon">
+            <div className="icon hover">
               <img src={ICNavNotification} alt="Notification" />
             </div>
           </div>
           {login && (
-            <button className="button-username" onClick={() => setLogin(false)}>
+            <button
+              className="button-username hover"
+              onClick={() => setLogin(false)}
+            >
               Admin 1: Pramono
             </button>
           )}
@@ -65,6 +68,7 @@ Navbar.propTypes = {
 const StyledNavbar = styled.nav`
   padding: 40px 0;
   background: #ffffff 0% 0% no-repeat padding-box;
+  border-bottom: 1px solid #8b8b8bae;
   margin-bottom: 35px;
   .content {
     display: flex;

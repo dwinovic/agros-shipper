@@ -1,7 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+import { DashboardSection } from '../../components';
 
 const DashboardKerabat = () => {
-  return <div>Dashboard Kerabat</div>;
+  return (
+    <StyledDashboardKerabat>
+      <DashboardSection />
+    </StyledDashboardKerabat>
+  );
 };
+
+const StyledDashboardKerabat = styled.main``;
 
 export default DashboardKerabat;
