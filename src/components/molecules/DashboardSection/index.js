@@ -28,10 +28,20 @@ const DashboardSection = () => {
             <CardAddPurchaseOrder />
           </div>
           <div className="small">
-            <CardStatusPO status="Aktif" theme="green" totalItem={100} />
+            <CardStatusPO
+              status="Aktif"
+              theme="green"
+              totalItem={100}
+              icon="paper aktif"
+            />
           </div>
           <div className="small">
-            <CardStatusPO status="Sisa" theme="orange" totalItem={10} />
+            <CardStatusPO
+              status="Sisa"
+              theme="orange"
+              totalItem={10}
+              icon="paper sisa"
+            />
           </div>
         </div>
         <div className="row">
@@ -86,7 +96,6 @@ const StyledDashboardSection = styled.section`
     }
   }
   .menu-dashboard {
-    background-color: cyan;
     width: 100%;
     .row {
       display: flex;
@@ -99,18 +108,17 @@ const StyledDashboardSection = styled.section`
       }
       .medium25 {
         width: 25%;
-        background-color: yellow;
       }
       .medium35 {
         width: 30%;
         flex: 1;
       }
       .large {
-        background-color: pink;
         flex: 1;
         width: 0;
       }
     }
   }
 `;
+
 export default DashboardSection;

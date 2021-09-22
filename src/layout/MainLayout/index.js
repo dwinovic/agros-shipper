@@ -77,7 +77,6 @@ const StyledMainLayout = styled.div`
   }
   .heading-card-md {
     font-size: 28px;
-    margin-bottom: 30px;
   }
   /* END ==== Global Styling for current page and children component */
 `;

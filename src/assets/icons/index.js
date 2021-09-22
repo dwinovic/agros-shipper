@@ -15,6 +15,13 @@ import ICBtnNext from './next.svg';
 import ICMessagerGreen from './messager.svg';
 import ICNavMessagerGreen from './green-messeger.svg';
 import ICPayGreen from './pay.svg';
+import ICCarActive from './car-aktif.svg';
+import ICCar from './car-sisa.svg';
+import ICTerkirim from './terkirim.png';
+import ICTertunda from './tertunda.png';
+import ICDikirim from './dikirim.png';
+import ICLocation from './location.svg';
+import ICNextRight from './next-right.svg';
 
 export {
   ICMessagerGreen,
@@ -34,4 +41,11 @@ export {
   ICHumberger,
   ICProfile,
   ICSetting,
+  ICCarActive,
+  ICCar,
+  ICTerkirim,
+  ICDikirim,
+  ICTertunda,
+  ICLocation,
+  ICNextRight,
 };

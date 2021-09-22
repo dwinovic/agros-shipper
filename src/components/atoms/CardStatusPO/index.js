@@ -2,9 +2,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { CardWrapper } from '..';
-import { ICPaperCheck, ICPaperOrange } from '../../../assets';
+import {
+  ICCar,
+  ICCarActive,
+  ICPaperCheck,
+  ICPaperOrange,
+} from '../../../assets';
 
-const CardStatusPO = ({ status, theme, totalItem }) => {
+const CardStatusPO = ({ status, theme, totalItem, icon }) => {
   const descriptionStatus = {
     Aktif: (
       <p className="text-md">
@@ -18,16 +23,18 @@ const CardStatusPO = ({ status, theme, totalItem }) => {
     ),
   };
   const iconCard = {
-    Aktif: ICPaperCheck,
-    Sisa: ICPaperOrange,
+    'paper aktif': ICPaperCheck,
+    'paper sisa': ICPaperOrange,
+    'car aktif': ICCarActive,
+    'car sisa': ICCar,
   };
 
   return (
     <StyledCardStatusPO theme={theme} status={status}>
-      <CardWrapper className="content">
+      <CardWrapper className="content-card-status">
         <div className="header">
           <div className="icon">
-            <img src={iconCard[status]} alt="po active" />
+            <img src={iconCard[icon]} alt="po active" />
           </div>
         </div>
         <div className="body">
@@ -71,6 +78,7 @@ CardStatusPO.defaultProps = {};
 CardStatusPO.propTypes = {
   status: PropTypes.oneOf(['Aktif', 'Sisa']).isRequired,
   theme: PropTypes.string,
+  icon: PropTypes.string,
   totalItem: PropTypes.number.isRequired,
 };
 
@@ -78,7 +86,7 @@ const StyledCardStatusPO = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  .content {
+  .content-card-status {
     background-color: ${({ theme }) => {
       if (theme === 'green') return '#eff8f1';
       if (theme === 'orange') return '#fff3d9';
