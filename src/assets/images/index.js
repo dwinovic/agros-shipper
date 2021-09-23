@@ -5,6 +5,8 @@ import IMGTransporter from './transporter.jpg';
 import IMGBGFooter from './bgFooter.png';
 import ICLogoFooter from './logo-footer.png';
 import IMGBgIconChecklist from './bg-icon-checklist.png';
+import IMGBgHeader from './bg-header.png';
+
 export {
   ICLogoFooter,
   IMGBgCard,
@@ -13,4 +15,5 @@ export {
   IMGTransporter,
   IMGBGFooter,
   IMGBgIconChecklist,
+  IMGBgHeader,
 };

@@ -7,22 +7,22 @@ import {
   PurchaseOrderSection,
 } from '../../components';
 
-const DashboardKerabat = () => {
+const DashboardKerabatPage = () => {
   return (
-    <StyledDashboardKerabat>
+    <StyledDashboardKerabatPage>
       <DashboardSection />
       <PurchaseOrderSection />
       <LayananSection />
       {/* <CarouselPelayanan /> */}
       <HistoryPurchaseSection />
-    </StyledDashboardKerabat>
+    </StyledDashboardKerabatPage>
   );
 };
 
-const StyledDashboardKerabat = styled.main`
+const StyledDashboardKerabatPage = styled.main`
   display: flex;
   flex-direction: column;
   gap: 100px;
 `;
 
-export default DashboardKerabat;
+export default DashboardKerabatPage;

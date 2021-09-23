@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { CardOrderDetail, CardStatusMuatan, CardStatusPO } from '../..';
+import { ICCarActive, ICCarOrange } from '../../../assets';
 
 const PurchaseOrderSection = () => {
   return (
@@ -15,16 +16,36 @@ const PurchaseOrderSection = () => {
             percent={45}
           >
             <CardStatusPO
-              status="Aktif"
+              icon={ICCarActive}
+              status={
+                <>
+                  <span className="text-bold">PO</span> Aktif
+                </>
+              }
+              description={
+                <>
+                  Purchase order yang <br />
+                  <span className="text-bold">sedang berjalan.</span>
+                </>
+              }
               theme="green"
               totalItem={400}
-              icon="car aktif"
             />
             <CardStatusPO
-              status="Sisa"
+              icon={ICCarOrange}
+              status={
+                <>
+                  <span className="text-bold">PO</span> Sisa
+                </>
+              }
+              description={
+                <>
+                  Purchase order yang <br />
+                  <span className="text-bold">belum berjalan.</span>
+                </>
+              }
               theme="orange"
               totalItem={200}
-              icon="car sisa"
             />
           </CardOrderDetail>
         </div>

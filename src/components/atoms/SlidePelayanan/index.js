@@ -21,43 +21,50 @@ const ServiceItem = ({ title, description, link, bgImage }) => {
 const SlidePelayanan = () => {
   return (
     <StyledSlidePelayanan>
-      <div className="blank" />
-      <ServiceItem
-        title="AGROS DRIVER"
-        description="Agros menawarkan keleluasaan untuk memilih proyek sehinga peningkatan
+      <div className="content-pelayanan">
+        <ServiceItem
+          title="AGROS DRIVER"
+          description="Agros menawarkan keleluasaan untuk memilih proyek sehinga peningkatan
           pendapatan bukan lagi jadi impian"
-        bgImage={IMGDriver}
-      />
-      <ServiceItem
-        title="AGROS TRANSPERTER"
-        description="Tidak ada yang tidak mungkin. Kini, perusahaan bisa dengan cepat mendapatkan tanpa harus melakukan hal berat."
-        bgImage={IMGTransporter}
-      />
-      <ServiceItem
-        title="AGROS DRIVER"
-        description="Agros menawarkan keleluasaan untuk memilih proyek sehinga peningkatan
+          bgImage={IMGDriver}
+        />
+        <ServiceItem
+          title="AGROS TRANSPERTER"
+          description="Tidak ada yang tidak mungkin. Kini, perusahaan bisa dengan cepat mendapatkan tanpa harus melakukan hal berat."
+          bgImage={IMGTransporter}
+        />
+        <ServiceItem
+          title="AGROS DRIVER"
+          description="Agros menawarkan keleluasaan untuk memilih proyek sehinga peningkatan
           pendapatan bukan lagi jadi impian"
-        bgImage={IMGDriver}
-      />
+          bgImage={IMGDriver}
+        />
+      </div>
     </StyledSlidePelayanan>
   );
 };
 
 const StyledSlidePelayanan = styled.div`
   margin-top: 30px;
-  height: max-content;
-  height: 260px;
-  display: flex;
-  width: 100%;
-  overflow: auto;
+  width: 100vw;
   overflow-x: scroll;
-  .blank {
-    width: calc((100vw - 1500px) / 2);
-    height: 100%;
+  .content-pelayanan {
+    width: max-content;
+    height: 260px;
+    display: flex;
+    &::before,
+    &::after {
+      content: ' ';
+      display: inline-block;
+      width: calc((100vw - 1500px) / 2);
+      height: 100%;
+    }
   }
 `;
+
 const StyledServiceItem = styled(CardWrapper)`
-  width: 30%;
+  background-color: pink;
+  width: 700px;
   background-image: ${({ bgImage }) => `url(${bgImage})`};
   background-position: center;
   background-size: cover;

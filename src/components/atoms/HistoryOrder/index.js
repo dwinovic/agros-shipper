@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { CardWrapper, Line } from '..';
 import {
   ICCheclistWhite,
@@ -8,7 +8,16 @@ import {
   IMGBgIconChecklist,
 } from '../../../assets';
 
-const HistoryOrder = () => {
+const HistoryOrder = ({
+  noOrder,
+  totalRitase,
+  namaBarang,
+  beratBarang,
+  kotaMuat,
+  tanggalMuat,
+  kotaBongkar,
+  tanggalBongkar,
+}) => {
   return (
     <StyledHistoryOrder>
       <CardWrapper className="content">
@@ -18,32 +27,28 @@ const HistoryOrder = () => {
           </div>
           <div className="detail">
             <p className="text-md">No. Delivery Order</p>
-            <p className="text-lg text-extra-bold">DO-AGRS-240521.1228</p>
-            <p className="text-md">Total 1 Ritase</p>
+            <p className="text-lg text-extra-bold">{noOrder}</p>
+            <p className="text-md">Total {totalRitase} Ritase</p>
           </div>
         </div>
         <Line />
         <div className="nama-barang">
-          <p className="text-md">No. Delivery Order</p>
-          <p className="text-lg text-extra-bold">DO-AGRS-240521.1228</p>
-          <p className="text-md">Total 1 Ritase</p>
+          <p className="text-md">Nama Barang</p>
+          <p className="text-lg text-extra-bold">{namaBarang}</p>
+          <p className="text-md">{beratBarang} Ton</p>
         </div>
         <Line />
         <div className="kota-masuk">
-          <p className="text-md">No. Delivery Order</p>
-          <p className="text-lg text-extra-bold secondary">
-            DO-AGRS-240521.1228
-          </p>
-          <p className="text-md">Total 1 Ritase</p>
+          <p className="text-md">Kota Muat</p>
+          <p className="text-lg text-extra-bold secondary">{kotaMuat}</p>
+          <p className="text-md">{tanggalMuat}</p>
         </div>
         <Line />
         <div className="kota-bongkar">
           <div>
-            <p className="text-md">No. Delivery Order</p>
-            <p className="text-lg text-extra-bold primary">
-              DO-AGRS-240521.1228
-            </p>
-            <p className="text-md">Total 1 Ritase</p>
+            <p className="text-md">Kota Bongkar</p>
+            <p className="text-lg text-extra-bold primary">{kotaBongkar}</p>
+            <p className="text-md">{tanggalBongkar}</p>
           </div>
           <div className="button-next bg-gray hover">
             <img src={ICNextRight} alt="icon next" />
@@ -53,9 +58,27 @@ const HistoryOrder = () => {
     </StyledHistoryOrder>
   );
 };
-HistoryOrder.defaultProps = {};
+HistoryOrder.defaultProps = {
+  noOrder: '000000 0000 0000',
+  totalRitase: 0,
+  namaBarang: 'Nama barang',
+  beratBarang: 0,
+  kotaMuat: 'Kota muat',
+  tanggalMuat: '00/00/00',
+  kotaBongkar: 'Kota Bongkar',
+  tanggalBongkar: '00/00/00',
+};
 
-HistoryOrder.propTypes = {};
+HistoryOrder.propTypes = {
+  noOrder: PropTypes.string.isRequired,
+  totalRitase: PropTypes.number.isRequired,
+  namaBarang: PropTypes.string.isRequired,
+  beratBarang: PropTypes.number.isRequired,
+  kotaMuat: PropTypes.string.isRequired,
+  tanggalMuat: PropTypes.string.isRequired,
+  kotaBongkar: PropTypes.string.isRequired,
+  tanggalBongkar: PropTypes.string.isRequired,
+};
 
 const StyledHistoryOrder = styled.section`
   width: 100%;

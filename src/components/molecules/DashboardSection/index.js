@@ -1,20 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
+  Breadcrumbs,
   CardAddPurchaseOrder,
   CardMenu,
   CardProfileCompany,
   CardStatusPO,
 } from '../..';
+import {
+  ICBoxPay,
+  ICKritik,
+  ICMessagerGreen,
+  ICPaperCheck,
+  ICPaperOrange,
+} from '../../../assets';
 
 const DashboardSection = () => {
+  const pathNavigation = [
+    {
+      name: 'DASHBOARD',
+      path: '/dashboard',
+      active: true,
+    },
+  ];
+
   return (
     <StyledDashboardSection className="container">
       <h1 className="heading-section">Dashboard Kerabat</h1>
-      <div className="navigation">
-        <p className="text-sm text-bold">NAVIGATION :</p>
-        <div className="current-page">DASHBOARD</div>
-      </div>
+      <Breadcrumbs path={pathNavigation} />
       <div className="menu-dashboard">
         <div className="row">
           <div className="medium35">
@@ -29,45 +42,85 @@ const DashboardSection = () => {
           </div>
           <div className="small">
             <CardStatusPO
-              status="Aktif"
+              icon={ICPaperCheck}
+              status={
+                <>
+                  <span className="text-bold">PO</span> Aktif
+                </>
+              }
+              description={
+                <>
+                  Purchase order yang{' '}
+                  <span className="text-bold">sedang berjalan.</span>
+                </>
+              }
               theme="green"
               totalItem={100}
-              icon="paper aktif"
             />
           </div>
           <div className="small">
             <CardStatusPO
-              status="Sisa"
+              icon={ICPaperOrange}
+              status={
+                <>
+                  <span className="text-bold">PO</span> Aktif
+                </>
+              }
+              description={
+                <>
+                  Purchase order yang{' '}
+                  <span className="text-bold">belum berjalan.</span>
+                </>
+              }
               theme="orange"
               totalItem={10}
-              icon="paper sisa"
             />
           </div>
         </div>
         <div className="row">
           <div className="medium25">
             <CardMenu
-              title="Messenger"
-              onClick={() => {
-                //link menuju messager
-              }}
+              icon={ICMessagerGreen}
+              title={
+                <>
+                  <span className="text-bold">Agros</span> Messager
+                </>
+              }
+              description={
+                <>
+                  Interaksi eksklusif <span className="text-bold">1-ON-1</span>{' '}
+                  bersama Agros Sales / Admin sesuai dengan Office Hours.
+                </>
+              }
+              onClick={() => {}}
+              footer={
+                <span>
+                  <span className="text-bold">MON - FRI</span> 09.00 - 17.00
+                </span>
+              }
             />
           </div>
           <div className="medium25">
             <CardMenu
-              title="Pay"
-              onClick={() => {
-                //link menuju payment
-              }}
+              icon={ICBoxPay}
+              title={
+                <>
+                  <span className="text-bold">Agros</span> Pay
+                </>
+              }
+              description="Halaman pembayaran eksklusif yang menawarkan kemudahan untuk muatan Anda."
+              onClick={() => {}}
+              footer="Lihat Tagihan Anda"
             />
           </div>
           <div className="large">
             <CardMenu
               withImage
+              icon={ICKritik}
               title="Kritik dan Saran"
-              onClick={() => {
-                //link menuju kritik dan saran
-              }}
+              description="Agros team sangat terbuka dengan kritik dan saran Anda demi kenyamanan Anda."
+              onClick={() => {}}
+              footer="Masukan Kritik dan Saran"
             />
           </div>
         </div>
@@ -81,20 +134,6 @@ DashboardSection.defaultProps = {};
 DashboardSection.propTypes = {};
 
 const StyledDashboardSection = styled.section`
-  .navigation {
-    display: flex;
-    gap: 33px;
-    align-items: center;
-    margin-bottom: 26px;
-    .current-page {
-      background-color: #4c9f70;
-      border-radius: 5px;
-      color: #ffffff;
-      padding: 8px 11px;
-      font-weight: 600;
-      font-size: 12px;
-    }
-  }
   .menu-dashboard {
     width: 100%;
     .row {

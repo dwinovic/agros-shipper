@@ -60,6 +60,8 @@ const StyledCardOrderDetail = styled.div`
     justify-content: center;
     .detail-info {
       width: 70%;
+      flex: 1;
+      flex: auto;
       .heading-card-md {
         margin: 10px 0;
       }
@@ -101,7 +103,6 @@ const StyledCardOrderDetail = styled.div`
       }
     }
     .more-info {
-      /* width: 40%; */
       display: flex;
       gap: 16px;
     }
