@@ -2,46 +2,32 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { CardWrapper } from '..';
-import {
-  ICCar,
-  ICCarActive,
-  ICPaperCheck,
-  ICPaperOrange,
-} from '../../../assets';
 
-const CardStatusPO = ({ status, theme, totalItem, icon }) => {
-  const descriptionStatus = {
-    Aktif: (
-      <p className="text-md">
-        Purchase order yang <span className="text-bold">sedang berjalan.</span>
-      </p>
-    ),
-    Sisa: (
-      <p className="text-md">
-        Purchase order yang <span className="text-bold">belum berjalan.</span>
-      </p>
-    ),
-  };
-  const iconCard = {
-    'paper aktif': ICPaperCheck,
-    'paper sisa': ICPaperOrange,
-    'car aktif': ICCarActive,
-    'car sisa': ICCar,
-  };
-
+const CardStatusPO = ({
+  status,
+  theme,
+  totalItem,
+  icon,
+  className,
+  description,
+  titleColor,
+}) => {
   return (
-    <StyledCardStatusPO theme={theme} status={status}>
+    <StyledCardStatusPO
+      theme={theme}
+      titleColor={titleColor}
+      status={status}
+      className={className}
+    >
       <CardWrapper className="content-card-status">
         <div className="header">
           <div className="icon">
-            <img src={iconCard[icon]} alt="po active" />
+            <img src={icon} alt="po active" />
           </div>
         </div>
         <div className="body">
-          <p className="heading-card-sm">
-            <span className="text-bold">PO</span> {status}
-          </p>
-          {descriptionStatus[status]}
+          <p className="heading-card-sm">{status}</p>
+          <p className="text-md">{description}</p>
           <p className="total">{totalItem}</p>
         </div>
         <div className="footer hover">
@@ -90,6 +76,9 @@ const StyledCardStatusPO = styled.div`
     background-color: ${({ theme }) => {
       if (theme === 'green') return '#eff8f1';
       if (theme === 'orange') return '#fff3d9';
+      if (theme === 'blue') return '#E5F8FC';
+      if (theme === 'gray') return '#F8F8F8';
+      if (theme === 'purple') return '#F8F8F8';
       return 'white';
     }};
     .header {
@@ -102,15 +91,22 @@ const StyledCardStatusPO = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
     .body {
       flex: 1;
       .heading-card-sm {
         color: #4c9f70;
-        color: ${({ status }) => {
-          if (status === 'Aktif') return '#4c9f70';
-          if (status === 'Sisa') return '#ffbb00';
+        color: ${({ theme, titleColor }) => {
+          if (theme === 'orange' || titleColor === 'orange') return '#ffbb00';
+          if (theme === 'green' || titleColor === 'green') return '#4C9F70';
+          if (theme === 'blue' || titleColor === 'blue') return '#517CA7';
+          if (theme === 'purple' || titleColor === 'purple') return '#806DB2';
         }};
       }
       .text-md {
@@ -129,14 +125,14 @@ const StyledCardStatusPO = styled.div`
     }
     &:hover {
       .footer {
-        color: ${({ status }) => {
-          if (status === 'Aktif') return '#4c9f70';
-          if (status === 'Sisa') return '#ffbb00';
+        color: ${({ theme }) => {
+          if (theme === 'green') return '#4c9f70';
+          if (theme === 'orange') return '#ffbb00';
         }};
         svg path {
-          fill: ${({ status }) => {
-            if (status === 'Aktif') return '#4c9f70';
-            if (status === 'Sisa') return '#ffbb00';
+          fill: ${({ theme }) => {
+            if (theme === 'green') return '#4c9f70';
+            if (theme === 'orange') return '#ffbb00';
           }};
         }
       }

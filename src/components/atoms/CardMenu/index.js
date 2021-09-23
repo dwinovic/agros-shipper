@@ -9,64 +9,22 @@ import {
   IMGKritikDanSaran,
 } from '../../../assets';
 
-const CardMenu = ({ withImage, title, onClick }) => {
-  const iconMenu = {
-    Messenger: ICMessagerGreen,
-    Pay: ICPayGreen,
-    'Kritik dan Saran': ICNavMessagerGreen,
-  };
-
-  const titles = {
-    Messenger: (
-      <>
-        <span className="text-bold">Agros</span> {title}
-      </>
-    ),
-    Pay: (
-      <>
-        <span className="text-bold">Agros</span> {title}
-      </>
-    ),
-    'Kritik dan Saran': <span className="text-bold">{title}</span>,
-  };
-
-  const descriptionMenu = {
-    Messenger: (
-      <>
-        Interaksi eksklusif <span className="text-bold">1-ON-1 </span> bersama
-        Agros Sales / Admin sesuai dengan Office Hours.
-      </>
-    ),
-    Pay: 'Halaman pembayaran eksklusif yang menawarkan kemudahan untuk muatan Kerabat.',
-    'Kritik dan Saran':
-      'Agros Team sangat terbuka dengan kritik dan saran Anda demi kenyamanan Anda',
-  };
-
-  const navigationMenu = {
-    Messenger: (
-      <>
-        <span className="text-bold">MON - FRI</span> 09.00 - 17.00
-      </>
-    ),
-    Pay: 'Lihat tagihan anda',
-    'Kritik dan Saran': 'Masukan kritik dan saran',
-  };
-
+const CardMenu = ({ withImage, title, onClick, description, footer, icon }) => {
   return (
     <StyledCardMenu>
       <CardWrapper className={`content ${withImage && 'withImage'}`}>
         <div className="left">
           <div className="header">
             <div className="icon-wrapper">
-              <img src={iconMenu[title]} alt="icon" />
+              <img src={icon} alt="icon" />
             </div>
-            <p className="heading-card-sm">{titles[title]}</p>
+            <p className="heading-card-sm">{title}</p>
           </div>
           <div className="body">
-            <p className="text-md">{descriptionMenu[title]}</p>
+            <p className="text-md">{description}</p>
           </div>
           <div className="footer" onClick={onClick}>
-            {navigationMenu[title]}
+            {footer}
             <svg
               width="16"
               height="16"
@@ -113,6 +71,7 @@ const StyledCardMenu = styled.div`
     .left {
       display: flex;
       flex-direction: column;
+      height: 100%;
       .header {
         .icon-wrapper {
           background-color: #eff8f1;
@@ -127,6 +86,8 @@ const StyledCardMenu = styled.div`
       .body {
         flex: 1;
         margin-bottom: 24px;
+        display: flex;
+        align-items: center;
         .text-md {
           color: #000000;
         }

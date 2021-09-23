@@ -13,20 +13,27 @@ import ICPaperCheck from './paper-check.svg';
 import ICPaperOrange from './paper-orange.svg';
 import ICBtnNext from './next.svg';
 import ICMessagerGreen from './messager.svg';
-import ICNavMessagerGreen from './green-messeger.svg';
+import ICKritik from './green-messeger.svg';
 import ICPayGreen from './pay.svg';
 import ICCarActive from './car-aktif.svg';
-import ICCar from './car-sisa.svg';
+import ICCarOrange from './car-sisa.svg';
 import ICTerkirim from './terkirim.png';
 import ICTertunda from './tertunda.png';
 import ICDikirim from './dikirim.png';
 import ICLocation from './location.svg';
 import ICNextRight from './next-right.svg';
 import ICCheclistWhite from './checklist white.svg';
+import ICSearch from './search.svg';
+import ICBoxMessager from './box-message.svg';
+import ICBoxPay from './box-pay.svg';
+
 export {
+  ICBoxMessager,
+  ICBoxPay,
+  ICSearch,
   ICCheclistWhite,
   ICMessagerGreen,
-  ICNavMessagerGreen,
+  ICKritik,
   ICPayGreen,
   ICBtnNext,
   ICPaperCheck,
@@ -43,7 +50,7 @@ export {
   ICProfile,
   ICSetting,
   ICCarActive,
-  ICCar,
+  ICCarOrange,
   ICTerkirim,
   ICDikirim,
   ICTertunda,

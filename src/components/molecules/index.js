@@ -4,7 +4,9 @@ import HistoryPurchaseSection from './HistoryPurchaseSection';
 import LayananSection from './LayananSection';
 import Navbar from './Navbar';
 import PurchaseOrderSection from './PurchaseOrderSection';
+import HeaderSection from './HeaderSection';
 export {
+  HeaderSection,
   HistoryPurchaseSection,
   LayananSection,
   Navbar,

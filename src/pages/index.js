@@ -1,1 +1,4 @@
-import DashboardKerabat from './DashboardKerabat';
+import DashboardKerabatPage from './DashboardKerabatPage';
+import MuatanDirimPage from './MuatanDikirimPage';
+
+export { MuatanDirimPage, DashboardKerabatPage };

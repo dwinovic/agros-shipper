@@ -11,7 +11,10 @@ import CarouselPelayanan from './CarouselPelayanan';
 import HistoryOrder from './HistoryOrder';
 import Line from './Line';
 import Pagination from './Pagination';
+import Breadcrumbs from './Breadcrumbs';
+import DashboardMuatanDikirim from './DashboardMuatanDikirim';
 export {
+  Breadcrumbs,
   Pagination,
   Line,
   HistoryOrder,
@@ -25,4 +28,5 @@ export {
   CardStatusPO,
   CardOrderDetail,
   CardStatusMuatan,
+  DashboardMuatanDikirim,
 };
