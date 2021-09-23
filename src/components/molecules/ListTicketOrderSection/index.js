@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { LayananSection } from '..';
 import { HistoryOrder, Pagination } from '../..';
 import { Page } from '../../atoms/Pagination';
 
@@ -27,7 +26,6 @@ const ListTicketOrderSection = () => {
         </div>
         <Pagination dataPage={pagination} />
       </div>
-      <LayananSection />
     </StyledListTicketOrderSection>
   );
 };

@@ -125,10 +125,17 @@ const StyledHistoryPurchaseSection = styled.section`
   .history-content {
     display: flex;
     margin-top: 50px;
+    width: 100vw;
+    overflow-x: scroll;
+    ::-webkit-scrollbar {
+      /* width: 0; */
+      /* background: transparent; */
+    }
     .scrool-history {
       width: max-content;
       display: flex;
-      &::before {
+      &::before,
+      &::after {
         content: ' ';
         display: inline-block;
         width: calc((100vw - 1500px) / 2);

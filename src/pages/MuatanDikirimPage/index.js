@@ -4,6 +4,7 @@ import { IMGBgHeader } from '../../assets';
 import {
   DashboardMuatanDikirim,
   HeaderSection,
+  LayananSection,
   ListTicketOrderSection,
 } from '../../components';
 
@@ -14,6 +15,7 @@ const MuatanDirimPage = () => {
       <HeaderSection className="header-content" />
       <DashboardMuatanDikirim />
       <ListTicketOrderSection />
+      <LayananSection />
     </StyledMuatanDirimPage>
   );
 };
