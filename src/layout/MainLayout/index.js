@@ -68,8 +68,16 @@ const StyledMainLayout = styled.div`
     font-size: 16px;
     color: #777777;
   }
+  .text-lg {
+    font-size: 18px;
+    color: #777777;
+  }
   .text-bold {
     font-weight: 600;
+  }
+  .text-extra-bold {
+    font-weight: 700;
+    color: #000000;
   }
   .heading-card-sm {
     font-size: 18px;
@@ -81,6 +89,19 @@ const StyledMainLayout = styled.div`
   }
   .heading-card-md {
     font-size: 28px;
+  }
+  /* Color */
+  .primary {
+    color: #4c9f70;
+  }
+  .secondary {
+    color: #ffbb00;
+  }
+  .gray {
+    color: #e8e8e8;
+  }
+  .bg-gray {
+    background-color: #e8e8e8;
   }
   /* END ==== Global Styling for current page and children component */
 `;

@@ -8,8 +8,11 @@ import CardStatusMuatan from './CardStatusMuatan';
 import ItemStatusMuatan from './ItemStatusMuatan';
 import SlidePelayanan from './SlidePelayanan';
 import CarouselPelayanan from './CarouselPelayanan';
-
+import HistoryOrder from './HistoryOrder';
+import Line from './Line';
 export {
+  Line,
+  HistoryOrder,
   CarouselPelayanan,
   SlidePelayanan,
   ItemStatusMuatan,

@@ -17,6 +17,7 @@ const ServiceItem = ({ title, description, link, bgImage }) => {
     </StyledServiceItem>
   );
 };
+
 const SlidePelayanan = () => {
   return (
     <StyledSlidePelayanan>

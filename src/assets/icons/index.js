@@ -22,8 +22,9 @@ import ICTertunda from './tertunda.png';
 import ICDikirim from './dikirim.png';
 import ICLocation from './location.svg';
 import ICNextRight from './next-right.svg';
-
+import ICCheclistWhite from './checklist white.svg';
 export {
+  ICCheclistWhite,
   ICMessagerGreen,
   ICNavMessagerGreen,
   ICPayGreen,

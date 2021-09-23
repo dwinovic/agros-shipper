@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {
   DashboardSection,
+  HistoryPurchaseSection,
   LayananSection,
   PurchaseOrderSection,
 } from '../../components';
@@ -13,6 +14,7 @@ const DashboardKerabat = () => {
       <PurchaseOrderSection />
       <LayananSection />
       {/* <CarouselPelayanan /> */}
+      <HistoryPurchaseSection />
     </StyledDashboardKerabat>
   );
 };
