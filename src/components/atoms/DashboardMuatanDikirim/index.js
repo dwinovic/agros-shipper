@@ -1,7 +1,7 @@
 import React from 'react';
 import { CardMenu, CardOrderDetail, CardStatusPO } from '..';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import {
   ICBoxMessager,
   ICBoxPay,

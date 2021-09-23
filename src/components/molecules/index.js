@@ -5,7 +5,9 @@ import LayananSection from './LayananSection';
 import Navbar from './Navbar';
 import PurchaseOrderSection from './PurchaseOrderSection';
 import HeaderSection from './HeaderSection';
+import ListTicketOrderSection from './ListTicketOrderSection';
 export {
+  ListTicketOrderSection,
   HeaderSection,
   HistoryPurchaseSection,
   LayananSection,

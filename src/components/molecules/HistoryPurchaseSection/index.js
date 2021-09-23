@@ -1,11 +1,72 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { HistoryOrder, Pagination } from '../..';
 // import { Page } from '../../atoms/Pagination';
 
 const HistoryPurchaseSection = () => {
-  const [data, setData] = useState([1, 2, 3, 4, 5]);
-  console.log(setData);
+  // console.log(setData);
+  const dataHistory = [
+    {
+      no_delivery_order: 'DO-AGRS-240521.1228',
+      total_ritase: 1,
+      nama_barang: 'Pasir Cuci Lumajang',
+      berat_barang: 35,
+      kota_muat: 'Gresik',
+      tanggal_muat: '23/12/2020',
+      kota_bongkar: 'Lumajang',
+      tangal_bongkar: '26/12/2020',
+    },
+    {
+      no_delivery_order: 'DO-AGRS-240521.1228',
+      total_ritase: 1,
+      nama_barang: 'Pasir Cuci Lumajang',
+      berat_barang: 35,
+      kota_muat: 'Gresik',
+      tanggal_muat: '23/12/2020',
+      kota_bongkar: 'Lumajang',
+      tangal_bongkar: '26/12/2020',
+    },
+    {
+      no_delivery_order: 'DO-AGRS-240521.1228',
+      total_ritase: 1,
+      nama_barang: 'Pasir Cuci Lumajang',
+      berat_barang: 35,
+      kota_muat: 'Gresik',
+      tanggal_muat: '23/12/2020',
+      kota_bongkar: 'Lumajang',
+      tangal_bongkar: '26/12/2020',
+    },
+    {
+      no_delivery_order: 'DO-AGRS-240521.1228',
+      total_ritase: 1,
+      nama_barang: 'Pasir Cuci Lumajang',
+      berat_barang: 35,
+      kota_muat: 'Gresik',
+      tanggal_muat: '23/12/2020',
+      kota_bongkar: 'Lumajang',
+      tangal_bongkar: '26/12/2020',
+    },
+    {
+      no_delivery_order: 'DO-AGRS-240521.1228',
+      total_ritase: 1,
+      nama_barang: 'Pasir Cuci Lumajang',
+      berat_barang: 35,
+      kota_muat: 'Gresik',
+      tanggal_muat: '23/12/2020',
+      kota_bongkar: 'Lumajang',
+      tangal_bongkar: '26/12/2020',
+    },
+    {
+      no_delivery_order: 'DO-AGRS-240521.1228',
+      total_ritase: 1,
+      nama_barang: 'Pasir Cuci Lumajang',
+      berat_barang: 35,
+      kota_muat: 'Gresik',
+      tanggal_muat: '23/12/2020',
+      kota_bongkar: 'Lumajang',
+      tangal_bongkar: '26/12/2020',
+    },
+  ];
   return (
     <StyledHistoryPurchaseSection>
       <div className="container">
@@ -18,16 +79,32 @@ const HistoryPurchaseSection = () => {
       <div className="history-content">
         <div className="scrool-history">
           <div className="item-wrapper active">
-            {data.map((item) => (
+            {dataHistory.map((item) => (
               <div className="item">
-                <HistoryOrder />
+                <HistoryOrder
+                  noOrder={item.no_delivery_order}
+                  totalRitase={item.total_ritase}
+                  namaBarang={item.nama_barang}
+                  beratBarang={item.berat_barang}
+                  kotaMuat={item.kota_muat}
+                  kotaBongkar={item.kota_bongkar}
+                  tanggalBongkar={item.tangal_bongkar}
+                />
               </div>
             ))}
           </div>
           <div className="item-wrapper">
-            {data.map((item) => (
+            {dataHistory.map((item) => (
               <div className="item">
-                <HistoryOrder />
+                <HistoryOrder
+                  noOrder={item.no_delivery_order}
+                  totalRitase={item.total_ritase}
+                  namaBarang={item.nama_barang}
+                  beratBarang={item.berat_barang}
+                  kotaMuat={item.kota_muat}
+                  kotaBongkar={item.kota_bongkar}
+                  tanggalBongkar={item.tangal_bongkar}
+                />
               </div>
             ))}
           </div>

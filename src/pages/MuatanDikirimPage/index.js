@@ -2,21 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { IMGBgHeader } from '../../assets';
 import {
-  CardOrderDetail,
-  CardStatusPO,
   DashboardMuatanDikirim,
-  Footer,
   HeaderSection,
+  ListTicketOrderSection,
 } from '../../components';
 
 const MuatanDirimPage = () => {
   return (
     <StyledMuatanDirimPage>
       <div className="background-header" />
-      <div className="header-content">
-        <HeaderSection />
-        <DashboardMuatanDikirim />
-      </div>
+      <HeaderSection className="header-content" />
+      <DashboardMuatanDikirim />
+      <ListTicketOrderSection />
     </StyledMuatanDirimPage>
   );
 };
@@ -24,7 +21,7 @@ const MuatanDirimPage = () => {
 const StyledMuatanDirimPage = styled.main`
   position: relative;
   /* background-color: yellow; */
-  height: 1000px;
+  height: max-content;
   .background-header {
     background-image: ${() => `url(${IMGBgHeader})`};
     background-position: center;

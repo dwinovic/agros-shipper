@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Breadcrumbs, CardWrapper } from '../..';
 import { ICSearch } from '../../../assets';
+import PropTypes from 'prop-types';
 
-const HeaderSection = () => {
+const HeaderSection = ({ className }) => {
   const pathNavigation = [
     {
       name: 'DASHBOARD',
@@ -28,7 +29,7 @@ const HeaderSection = () => {
   ];
 
   return (
-    <StyledHeaderSection>
+    <StyledHeaderSection className={className}>
       <header className="container">
         <div className="header-left">
           <h1 className="heading-section white">Muatan Dikirim</h1>
@@ -49,7 +50,9 @@ const HeaderSection = () => {
 };
 HeaderSection.defaultProps = {};
 
-HeaderSection.propTypes = {};
+HeaderSection.propTypes = {
+  className: PropTypes.string,
+};
 
 const StyledHeaderSection = styled.section`
   header.container {

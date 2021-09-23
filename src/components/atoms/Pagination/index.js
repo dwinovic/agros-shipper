@@ -3,9 +3,24 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { ICNextRight } from '../../../assets';
 
-export const Page = ({ active, number }) => {
+export const Page = ({
+  active,
+  number,
+  className,
+  value,
+  onClick,
+  name,
+  id,
+}) => {
   return (
-    <StyledPage className={`${active && 'bg-primary'} hover`}>
+    <StyledPage className={`${active && 'bg-primary'} hover ${className}`}>
+      <input
+        type="radio"
+        value={value}
+        onChange={onClick}
+        name={name}
+        id={id}
+      />
       <span>{number}</span>
     </StyledPage>
   );
@@ -18,10 +33,15 @@ Page.propTypes = {
   number: PropTypes.number,
 };
 
-const Pagination = () => {
+const Pagination = ({ dataPage, ...props }) => {
+  console.log('dataPage', dataPage);
+  // const { totalPage, currentPage } = dataPage;
+
   return (
-    <StyledPagination>
+    <StyledPagination {...props}>
       <div className="pages">
+        {/* {dataPage?.totalPage.map(() => (
+          ))} */}
         <Page number={1} active />
         <Page number={2} />
         <Page number={3} />
@@ -74,10 +94,17 @@ const StyledPage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   &.bg-primary {
     span {
       color: white;
     }
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
   }
   span {
     font-weight: 700;

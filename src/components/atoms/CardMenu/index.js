@@ -1,13 +1,8 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { CardWrapper } from '..';
-import {
-  ICMessagerGreen,
-  ICNavMessagerGreen,
-  ICPayGreen,
-  IMGKritikDanSaran,
-} from '../../../assets';
+import { IMGKritikDanSaran } from '../../../assets';
 
 const CardMenu = ({ withImage, title, onClick, description, footer, icon }) => {
   return (
