@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { CardWrapper, Line } from '..';
 import {
   ICCheclistWhite,
@@ -45,7 +45,7 @@ const HistoryOrder = () => {
             </p>
             <p className="text-md">Total 1 Ritase</p>
           </div>
-          <div className="button-next bg-gray">
+          <div className="button-next bg-gray hover">
             <img src={ICNextRight} alt="icon next" />
           </div>
         </div>
@@ -64,12 +64,13 @@ const StyledHistoryOrder = styled.section`
     display: flex;
     gap: 1rem;
     padding: 16px;
+    background: transparent 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
     /* justify-content: space-between; */
     .no-order {
       display: flex;
       flex: auto;
       gap: 16px;
-      background-color: yellow;
       .checklist-icon {
         background-image: ${() => `url(${IMGBgIconChecklist})`};
         background-position: center;
@@ -91,15 +92,12 @@ const StyledHistoryOrder = styled.section`
       display: flex;
       flex-direction: column;
       gap: 2px;
-      background-color: cyan;
     }
     .kota-masuk {
-      background-color: pink;
       flex: auto;
     }
     .kota-bongkar {
       display: flex;
-      background-color: green;
       flex: auto;
       justify-content: space-between;
       .button-next {

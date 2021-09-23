@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { HistoryOrder } from '../..';
+import { HistoryOrder, Pagination } from '../..';
+// import { Page } from '../../atoms/Pagination';
 
 const HistoryPurchaseSection = () => {
   const [data, setData] = useState([1, 2, 3, 4, 5]);
+  console.log(setData);
   return (
     <StyledHistoryPurchaseSection>
       <div className="container">
@@ -15,6 +17,13 @@ const HistoryPurchaseSection = () => {
       </div>
       <div className="history-content">
         <div className="scrool-history">
+          <div className="item-wrapper active">
+            {data.map((item) => (
+              <div className="item">
+                <HistoryOrder />
+              </div>
+            ))}
+          </div>
           <div className="item-wrapper">
             {data.map((item) => (
               <div className="item">
@@ -22,14 +31,11 @@ const HistoryPurchaseSection = () => {
               </div>
             ))}
           </div>
-          {/* <div className="item-wrapper">
-            {data.map((item) => (
-              <div className="item">
-                <HistoryOrder />
-              </div>
-            ))}
-          </div> */}
         </div>
+      </div>
+      <div className="container pagination">
+        <p className="text-lg text-bold">Halaman</p>
+        <Pagination />
       </div>
     </StyledHistoryPurchaseSection>
   );
@@ -43,8 +49,7 @@ const StyledHistoryPurchaseSection = styled.section`
     display: flex;
     margin-top: 50px;
     .scrool-history {
-      width: 100vw;
-      background-color: green;
+      width: max-content;
       display: flex;
       &::before {
         content: ' ';
@@ -54,17 +59,22 @@ const StyledHistoryPurchaseSection = styled.section`
       }
       .item-wrapper {
         width: 1500px;
-        background-color: pink;
         width: 1500px;
         display: flex;
         flex-direction: column;
         gap: 16px;
         &.active {
-          .item {
-          }
+          margin-right: 24px;
         }
       }
     }
+  }
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+    gap: 60px;
+    margin-top: 40px;
+    align-items: center;
   }
 `;
 

@@ -94,6 +94,9 @@ const StyledMainLayout = styled.div`
   .primary {
     color: #4c9f70;
   }
+  .bg-primary {
+    background-color: #4c9f70;
+  }
   .secondary {
     color: #ffbb00;
   }
@@ -102,6 +105,12 @@ const StyledMainLayout = styled.div`
   }
   .bg-gray {
     background-color: #e8e8e8;
+  }
+  .white {
+    color: white;
+  }
+  .bg-white {
+    background-color: white;
   }
   /* END ==== Global Styling for current page and children component */
 `;

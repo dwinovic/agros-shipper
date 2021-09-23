@@ -10,7 +10,9 @@ import SlidePelayanan from './SlidePelayanan';
 import CarouselPelayanan from './CarouselPelayanan';
 import HistoryOrder from './HistoryOrder';
 import Line from './Line';
+import Pagination from './Pagination';
 export {
+  Pagination,
   Line,
   HistoryOrder,
   CarouselPelayanan,
