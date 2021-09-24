@@ -6,7 +6,7 @@
   </a>
 
   <h3 align="center">AGROS SHIPPER</h3>
-
+  <p align="center">Application mini test as a Front end Developer at <b>Agros Indonesia<b></p>
   <p align="center">
     <a href="https://agros-shipper.vercel.app/">View Prototype</a>
     ·
