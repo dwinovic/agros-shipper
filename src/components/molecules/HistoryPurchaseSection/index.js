@@ -1,72 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { HistoryOrder, Pagination } from '../..';
+import { Pagination, SlideHistoryPagination } from '../..';
+import { DB_Histories } from '../../../database';
 // import { Page } from '../../atoms/Pagination';
 
 const HistoryPurchaseSection = () => {
-  // console.log(setData);
-  const dataHistory = [
-    {
-      no_delivery_order: 'DO-AGRS-240521.1228',
-      total_ritase: 1,
-      nama_barang: 'Pasir Cuci Lumajang',
-      berat_barang: 35,
-      kota_muat: 'Gresik',
-      tanggal_muat: '23/12/2020',
-      kota_bongkar: 'Lumajang',
-      tangal_bongkar: '26/12/2020',
-    },
-    {
-      no_delivery_order: 'DO-AGRS-240521.1228',
-      total_ritase: 1,
-      nama_barang: 'Pasir Cuci Lumajang',
-      berat_barang: 35,
-      kota_muat: 'Gresik',
-      tanggal_muat: '23/12/2020',
-      kota_bongkar: 'Lumajang',
-      tangal_bongkar: '26/12/2020',
-    },
-    {
-      no_delivery_order: 'DO-AGRS-240521.1228',
-      total_ritase: 1,
-      nama_barang: 'Pasir Cuci Lumajang',
-      berat_barang: 35,
-      kota_muat: 'Gresik',
-      tanggal_muat: '23/12/2020',
-      kota_bongkar: 'Lumajang',
-      tangal_bongkar: '26/12/2020',
-    },
-    {
-      no_delivery_order: 'DO-AGRS-240521.1228',
-      total_ritase: 1,
-      nama_barang: 'Pasir Cuci Lumajang',
-      berat_barang: 35,
-      kota_muat: 'Gresik',
-      tanggal_muat: '23/12/2020',
-      kota_bongkar: 'Lumajang',
-      tangal_bongkar: '26/12/2020',
-    },
-    {
-      no_delivery_order: 'DO-AGRS-240521.1228',
-      total_ritase: 1,
-      nama_barang: 'Pasir Cuci Lumajang',
-      berat_barang: 35,
-      kota_muat: 'Gresik',
-      tanggal_muat: '23/12/2020',
-      kota_bongkar: 'Lumajang',
-      tangal_bongkar: '26/12/2020',
-    },
-    {
-      no_delivery_order: 'DO-AGRS-240521.1228',
-      total_ritase: 1,
-      nama_barang: 'Pasir Cuci Lumajang',
-      berat_barang: 35,
-      kota_muat: 'Gresik',
-      tanggal_muat: '23/12/2020',
-      kota_bongkar: 'Lumajang',
-      tangal_bongkar: '26/12/2020',
-    },
-  ];
   return (
     <StyledHistoryPurchaseSection>
       <div className="container">
@@ -78,41 +16,31 @@ const HistoryPurchaseSection = () => {
       </div>
       <div className="history-content">
         <div className="scrool-history">
-          <div className="item-wrapper active">
-            {dataHistory.map((item) => (
-              <div className="item">
-                <HistoryOrder
-                  noOrder={item.no_delivery_order}
-                  totalRitase={item.total_ritase}
-                  namaBarang={item.nama_barang}
-                  beratBarang={item.berat_barang}
-                  kotaMuat={item.kota_muat}
-                  kotaBongkar={item.kota_bongkar}
-                  tanggalBongkar={item.tangal_bongkar}
-                />
-              </div>
-            ))}
-          </div>
-          <div className="item-wrapper">
-            {dataHistory.map((item) => (
-              <div className="item">
-                <HistoryOrder
-                  noOrder={item.no_delivery_order}
-                  totalRitase={item.total_ritase}
-                  namaBarang={item.nama_barang}
-                  beratBarang={item.berat_barang}
-                  kotaMuat={item.kota_muat}
-                  kotaBongkar={item.kota_bongkar}
-                  tanggalBongkar={item.tangal_bongkar}
-                />
-              </div>
-            ))}
-          </div>
+          {/* {DB_Histories.data.map((page) => (
+            <div className="item-wrapper" key={page.page}>
+              {page.data.map((item, index) => (
+                <div className="item">
+                  <TicketCard
+                    key={index}
+                    noOrder={item.no_delivery_order}
+                    totalRitase={item.total_ritase}
+                    namaBarang={item.nama_barang}
+                    beratBarang={item.berat_barang}
+                    titleColThree={item.kota_muat}
+                    footerColThree={item.tangal_bongkar}
+                    titleColFour={item.kota_bongkar}
+                    footerColFour={item.tangal_bongkar}
+                  />
+                </div>
+              ))}
+            </div>
+          ))} */}
         </div>
       </div>
+      <SlideHistoryPagination />
       <div className="container pagination">
         <p className="text-lg text-bold">Halaman</p>
-        <Pagination />
+        <Pagination dataPage={DB_Histories} />
       </div>
     </StyledHistoryPurchaseSection>
   );
@@ -127,13 +55,16 @@ const StyledHistoryPurchaseSection = styled.section`
     margin-top: 50px;
     width: 100vw;
     overflow-x: scroll;
+    margin-bottom: 8px;
     ::-webkit-scrollbar {
-      /* width: 0; */
-      /* background: transparent; */
+      width: 0;
+      background: transparent;
+      /* visibility: hidden; */
     }
     .scrool-history {
       width: max-content;
       display: flex;
+      /* gap: 32px; */
       &::before,
       &::after {
         content: ' ';
@@ -147,8 +78,8 @@ const StyledHistoryPurchaseSection = styled.section`
         display: flex;
         flex-direction: column;
         gap: 16px;
+        margin-right: 24px;
         &.active {
-          margin-right: 24px;
         }
       }
     }

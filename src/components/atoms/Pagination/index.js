@@ -13,14 +13,17 @@ export const Page = ({
   id,
 }) => {
   return (
-    <StyledPage className={`${active && 'bg-primary'} hover ${className}`}>
-      <input
+    <StyledPage
+      className={`${active && 'bg-primary'} hover ${className}`}
+      onClick={onClick}
+    >
+      {/* <input
         type="radio"
         value={value}
         onChange={onClick}
         name={name}
         id={id}
-      />
+      /> */}
       <span>{number}</span>
     </StyledPage>
   );
@@ -34,19 +37,12 @@ Page.propTypes = {
 };
 
 const Pagination = ({ dataPage, ...props }) => {
-  console.log('dataPage', dataPage);
-  // const { totalPage, currentPage } = dataPage;
-
   return (
     <StyledPagination {...props}>
       <div className="pages">
-        {/* {dataPage?.totalPage.map(() => (
-          ))} */}
-        <Page number={1} active />
-        <Page number={2} />
-        <Page number={3} />
-        <Page number={4} />
-        <Page number={5} />
+        {dataPage?.data.map((item) => (
+          <Page number={item.page} active={item.page === 1 && true} />
+        ))}
       </div>
       <div className="handle-button-next">
         <div className="btn prev bg-gray hover">
@@ -100,12 +96,12 @@ const StyledPage = styled.div`
       color: white;
     }
   }
-  input {
+  /* input {
     position: absolute;
     opacity: 0;
     width: 100%;
     height: 100%;
-  }
+  } */
   span {
     font-weight: 700;
     height: max-content;

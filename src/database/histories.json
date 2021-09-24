@@ -1,0 +1,199 @@
+{
+  "database": "histories",
+  "meta": {
+    "totalPage": 3
+  },
+  "data": [{
+      "page": 1,
+      "data": [{
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "data": [{
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "data": [{
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Pasir Cuci Lumajang",
+          "berat_barang": 35,
+          "kota_muat": "Gresik",
+          "tanggal_muat": "23/12/2020",
+          "kota_bongkar": "Lumajang",
+          "tangal_bongkar": "26/12/2020"
+        }
+      ]
+    }
+  ]
+}

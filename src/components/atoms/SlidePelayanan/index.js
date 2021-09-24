@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { CardWrapper } from '..';
 import { IMGDriver, IMGTransporter } from '../../../assets';
 
-const ServiceItem = ({ title, description, link, bgImage }) => {
+export const ServiceItem = ({ title, description, link, bgImage }) => {
   return (
     <StyledServiceItem className="service" bgImage={bgImage}>
       <div className="header-service">
@@ -64,7 +64,9 @@ const StyledSlidePelayanan = styled.div`
 
 const StyledServiceItem = styled(CardWrapper)`
   background-color: pink;
-  width: 700px;
+  /* width: 700px; */
+  height: 100%;
+  width: 100%;
   background-image: ${({ bgImage }) => `url(${bgImage})`};
   background-position: center;
   background-size: cover;

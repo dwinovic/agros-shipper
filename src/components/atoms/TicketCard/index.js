@@ -1,29 +1,37 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { CardWrapper, Line } from '..';
-import {
-  ICCheclistWhite,
-  ICNextRight,
-  IMGBgIconChecklist,
-} from '../../../assets';
+import { ICNextRight } from '../../../assets';
 
-const HistoryOrder = ({
+const TicketCard = ({
+  typeTicket,
   noOrder,
   totalRitase,
   namaBarang,
   beratBarang,
-  kotaMuat,
-  tanggalMuat,
-  kotaBongkar,
-  tanggalBongkar,
+  titleColThree,
+  footerColThree,
+  titleColFour,
+  footerColFour,
+  theme,
+  icon,
 }) => {
+  const titleCol3 = {
+    history: 'Kota Muat',
+    status: 'Kota Bongkar',
+  };
+
+  const titleCol4 = {
+    history: 'Kota Bongkar',
+    status: 'Status',
+  };
   return (
-    <StyledHistoryOrder>
+    <StyledHistoryOrder theme={theme}>
       <CardWrapper className="content">
         <div className="no-order">
           <div className="checklist-icon">
-            <img src={ICCheclistWhite} alt="check icon" />
+            <img src={icon} alt="check icon" />
           </div>
           <div className="detail">
             <p className="text-md">No. Delivery Order</p>
@@ -39,16 +47,28 @@ const HistoryOrder = ({
         </div>
         <Line />
         <div className="kota-masuk">
-          <p className="text-md">Kota Muat</p>
-          <p className="text-lg text-extra-bold secondary">{kotaMuat}</p>
-          <p className="text-md">{tanggalMuat}</p>
+          <p className="text-md">{titleCol3[typeTicket]}</p>
+          <p
+            className={`text-lg text-extra-bold ${
+              theme === 'blue' ? '' : 'secondary'
+            }`}
+          >
+            {titleColThree}
+          </p>
+          <p className="text-md">{footerColThree}</p>
         </div>
         <Line />
         <div className="kota-bongkar">
           <div>
-            <p className="text-md">Kota Bongkar</p>
-            <p className="text-lg text-extra-bold primary">{kotaBongkar}</p>
-            <p className="text-md">{tanggalBongkar}</p>
+            <p className="text-md">{titleCol4[typeTicket]}</p>
+            <p
+              className={`text-lg text-extra-bold ${
+                theme === 'blue' ? '' : 'primary'
+              }`}
+            >
+              {titleColFour}
+            </p>
+            <p className="text-md">{footerColFour}</p>
           </div>
           <div className="button-next bg-gray hover">
             <img src={ICNextRight} alt="icon next" />
@@ -58,30 +78,41 @@ const HistoryOrder = ({
     </StyledHistoryOrder>
   );
 };
-HistoryOrder.defaultProps = {
+TicketCard.defaultProps = {
   noOrder: '000000 0000 0000',
   totalRitase: 0,
   namaBarang: 'Nama barang',
   beratBarang: 0,
-  kotaMuat: 'Kota muat',
-  tanggalMuat: '00/00/00',
-  kotaBongkar: 'Kota Bongkar',
-  tanggalBongkar: '00/00/00',
+  titleColThree: 'Kota muat',
+  footerColThree: '00/00/00',
+  titleColFour: 'Kota Bongkar',
+  footerColFour: '00/00/00',
+  typeTicket: 'history',
 };
 
-HistoryOrder.propTypes = {
+TicketCard.propTypes = {
   noOrder: PropTypes.string.isRequired,
   totalRitase: PropTypes.number.isRequired,
   namaBarang: PropTypes.string.isRequired,
   beratBarang: PropTypes.number.isRequired,
-  kotaMuat: PropTypes.string.isRequired,
-  tanggalMuat: PropTypes.string.isRequired,
-  kotaBongkar: PropTypes.string.isRequired,
-  tanggalBongkar: PropTypes.string.isRequired,
+  titleColThree: PropTypes.string.isRequired,
+  footerColThree: PropTypes.string.isRequired,
+  titleColFour: PropTypes.string.isRequired,
+  footerColFour: PropTypes.string.isRequired,
+  typeTicket: PropTypes.oneOf(['history', 'status']).isRequired,
+  theme: PropTypes.string,
 };
 
 const StyledHistoryOrder = styled.section`
   width: 100%;
+  background-color: ${({ theme }) => {
+    switch (theme) {
+      case 'blue':
+        return '#E5F8FC';
+      default:
+        return 'white';
+    }
+  }};
   .content {
     width: 100%;
     display: flex;
@@ -95,13 +126,11 @@ const StyledHistoryOrder = styled.section`
       flex: auto;
       gap: 16px;
       .checklist-icon {
-        background-image: ${() => `url(${IMGBgIconChecklist})`};
-        background-position: center;
-        background-size: cover;
         width: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
       .detail {
         display: flex;
@@ -136,4 +165,4 @@ const StyledHistoryOrder = styled.section`
     }
   }
 `;
-export default HistoryOrder;
+export default TicketCard;

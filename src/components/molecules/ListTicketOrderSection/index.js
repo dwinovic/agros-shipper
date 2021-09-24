@@ -1,22 +1,36 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { HistoryOrder, Pagination } from '../..';
+import { TicketCard, Pagination } from '../..';
+import { ICDikirim } from '../../../assets';
+import { DB_Histories, DB_StatusOrder } from '../../../database';
 import { Page } from '../../atoms/Pagination';
 
 const ListTicketOrderSection = () => {
-  const [data, setData] = useState([1, 2, 3, 4, 5]);
-  const [pagination] = useState([
-    {
-      totalPage: 7,
-      currentPage: 2,
-    },
-  ]);
-  console.log(setData);
+  const route = {
+    '/status-order&page=1': DB_StatusOrder.data[0],
+    '/status-order&page=2': DB_StatusOrder.data[1],
+    '/status-order&page=3': DB_StatusOrder.data[2],
+  };
+
+  const [currentPage] = useState(route['/status-order&page=1']);
 
   return (
     <StyledListTicketOrderSection className="container">
-      {data.map((item) => (
-        <HistoryOrder />
+      {currentPage.data.map((item, index) => (
+        <TicketCard
+          key={index}
+          icon={ICDikirim}
+          typeTicket="status"
+          theme="blue"
+          noOrder={item.no_delivery_order}
+          totalRitase={item.total_ritase}
+          namaBarang={item.nama_barang}
+          beratBarang={item.berat_barang}
+          titleColThree={item.kota_bongkar}
+          footerColThree={item.tangal_bongkar}
+          titleColFour={item.status}
+          footerColFour={item.tanggal_dikirim}
+        />
       ))}
       <div className="pagination-wrapper">
         <div className="option-show">
@@ -24,7 +38,7 @@ const ListTicketOrderSection = () => {
           <Page number={5} active className="page5" />
           <Page number={10} className="page10" />
         </div>
-        <Pagination dataPage={pagination} />
+        <Pagination dataPage={DB_Histories} />
       </div>
     </StyledListTicketOrderSection>
   );

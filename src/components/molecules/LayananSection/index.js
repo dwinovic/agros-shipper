@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SlidePelayanan } from '../..';
+import { CarouselPelayanan } from '../..';
 
 const LayananSection = () => {
   return (
@@ -35,7 +35,8 @@ const LayananSection = () => {
           </svg>
         </div>
       </div>
-      <SlidePelayanan />
+      {/* <SlidePelayanan /> */}
+      <CarouselPelayanan />
     </StyledLayananSection>
   );
 };
