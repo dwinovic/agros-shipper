@@ -1,0 +1,169 @@
+{
+  "database": "status order",
+  "meta": {
+    "totalPage": 3
+  },
+  "data": [{
+      "page": 1,
+      "data": [{
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "data": [{
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "data": [{
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        },
+        {
+          "no_delivery_order": "DO-AGRS-240521.1228",
+          "total_ritase": 1,
+          "nama_barang": "Gipsum",
+          "berat_barang": 35,
+          "kota_bongkar": "Tuban",
+          "tangal_bongkar": "26/12/2021",
+          "status": "Dikirim",
+          "tanggal_dikirim": "22/12/2021"
+        }
+      ]
+    }
+  ]
+}

@@ -1,10 +1,18 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  DashboardKerabatPage,
+  MuatanDirimPage,
+  PageNotFound,
+} from '../../pages';
+import PrivateRoute from './PrivateRoute';
 
 const Routes = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" component />
+        <PrivateRoute path="/" exact component={DashboardKerabatPage} />
+        <PrivateRoute path="/history" component={MuatanDirimPage} />
+        <Route path="*" component={PageNotFound} />
       </Switch>
     </Router>
   );
