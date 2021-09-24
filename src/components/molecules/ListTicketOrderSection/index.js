@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { TicketCard, Pagination } from '../..';
 import { ICDikirim } from '../../../assets';
 import { DB_Histories, DB_StatusOrder } from '../../../database';
+import { breakpoints } from '../../../utils';
 import { Page } from '../../atoms/Pagination';
 
 const ListTicketOrderSection = () => {
@@ -47,18 +48,28 @@ ListTicketOrderSection.defaultProps = {};
 
 ListTicketOrderSection.propTypes = {};
 const StyledListTicketOrderSection = styled.section`
-  padding-top: 80px;
+  padding-top: 80px !important;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  ${breakpoints.lessThan('tablet')` 
+  `}
   .pagination-wrapper {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
     margin-bottom: 60px;
+    ${breakpoints.lessThan('tablet')`
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    `}
     .option-show {
       display: flex;
       align-items: center;
+      ${breakpoints.lessThan('tablet')`
+        width: max-content;
+      `}
       p {
         margin-right: 26px;
       }

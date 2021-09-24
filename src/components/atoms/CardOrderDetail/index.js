@@ -4,10 +4,17 @@ import PropTypes from 'prop-types';
 import { CardWrapper } from '..';
 import { breakpoints, numberFormater } from '../../../utils';
 
-const CardOrderDetail = ({ children, idPurchase, percent, itemName, ton }) => {
+const CardOrderDetail = ({
+  children,
+  idPurchase,
+  percent,
+  itemName,
+  ton,
+  className,
+}) => {
   return (
     <StyledCardOrderDetail percent={percent}>
-      <CardWrapper className="content" hoverDisabled>
+      <CardWrapper className={`content ${className}`} hoverDisabled>
         <div className="detail-info">
           <p className="text-md">Nomor Purchase Order</p>
           <h3 className="heading-card-md">{idPurchase}</h3>
@@ -56,11 +63,11 @@ const StyledCardOrderDetail = styled.div`
     display: flex;
     gap: 32px;
     width: 100%;
-    ${breakpoints.lessThan('tablet')`
+    ${breakpoints.lessThan('laptop')`
       flex-wrap: wrap; 
     `}
     .detail-info {
-      width: 70%;
+      /* width: 70%; */
       flex: 1;
       flex: auto;
       display: flex;
@@ -109,7 +116,7 @@ const StyledCardOrderDetail = styled.div`
     .more-info {
       display: flex;
       gap: 16px;
-      ${breakpoints.lessThan('tablet')`
+      ${breakpoints.lessThan('laptop')`
         flex: 1;
       `}
       ${breakpoints.lessThan('mobile')`

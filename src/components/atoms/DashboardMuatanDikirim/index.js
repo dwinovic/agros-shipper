@@ -11,6 +11,7 @@ import {
   ICTerkirim,
   ICTertunda,
 } from '../../../assets';
+import { breakpoints } from '../../../utils';
 
 const DashboardMuatanDikirim = () => {
   return (
@@ -20,32 +21,36 @@ const DashboardMuatanDikirim = () => {
         itemName="Batubara"
         ton={200000}
         percent={20}
+        className="muatan-card-order"
       >
-        <div className="detail-status">
-          <CardStatusPO
-            className="item"
-            status={<span className="text-bold">Terkirim</span>}
-            description="Muatan Anda sedang dalam perjalanan."
-            theme="gray"
-            totalItem={396}
-            icon={ICTerkirim}
-          />
-          <CardStatusPO
-            className="item"
-            status={<span className="text-bold">Dikirim</span>}
-            description="Muatan Anda telah terbongkar di tujuan."
-            theme="blue"
-            totalItem={200}
-            icon={ICDikirim}
-          />
-          <CardStatusPO
-            className="item"
-            description="Muatan Anda mengalami keterlambatan."
-            status={<span className="text-bold">Tertunda</span>}
-            theme="purple"
-            totalItem={4}
-            icon={ICTertunda}
-          />
+        <div className="status-wrapper">
+          <div className="item">
+            <CardStatusPO
+              status={<span className="text-bold">Terkirim</span>}
+              description="Muatan Anda sedang dalam perjalanan."
+              theme="gray"
+              totalItem={396}
+              icon={ICTerkirim}
+            />{' '}
+          </div>
+          <div className="item">
+            <CardStatusPO
+              status={<span className="text-bold">Dikirim</span>}
+              description="Muatan Anda telah terbongkar di tujuan."
+              theme="blue"
+              totalItem={200}
+              icon={ICDikirim}
+            />
+          </div>
+          <div className="item tertunda">
+            <CardStatusPO
+              description="Muatan Anda mengalami keterlambatan."
+              status={<span className="text-bold">Tertunda</span>}
+              theme="purple"
+              totalItem={4}
+              icon={ICTertunda}
+            />
+          </div>
         </div>
       </CardOrderDetail>
       <div className="do-and-service">
@@ -118,21 +123,41 @@ DashboardMuatanDikirim.defaultProps = {};
 DashboardMuatanDikirim.propTypes = {};
 
 const StyledDashboardMuatanDikirim = styled.div`
-  .detail-status {
-    display: flex;
-    gap: 1rem;
-    .item {
-      width: 250px;
+  margin-top: -90px !important;
+  ${breakpoints.lessThan('tablet')`
+  `}
+  .muatan-card-order {
+    flex-direction: column;
+    .status-wrapper {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      flex-wrap: wrap;
+      .item {
+        width: 250px;
+        flex: auto;
+      }
     }
   }
+
   .do-and-service {
     display: flex;
     width: 100%;
     gap: 32px;
     margin-top: 32px;
+    flex-wrap: wrap;
+    ${breakpoints.lessThan('mobile')`
+      gap: 16px;
+    `}
     .item-service {
       width: 0;
       flex: auto;
+      ${breakpoints.lessThan('laptop')`
+        width: 35%;
+      `}
+      ${breakpoints.lessThan('mobile')`
+        width: 100%;
+      `}
     }
   }
 `;

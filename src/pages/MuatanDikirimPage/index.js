@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { IMGBgHeader } from '../../assets';
 import {
   DashboardMuatanDikirim,
   HeaderSection,
@@ -11,7 +10,6 @@ import {
 const MuatanDirimPage = () => {
   return (
     <StyledMuatanDirimPage>
-      <div className="background-header" />
       <HeaderSection className="header-content" />
       <DashboardMuatanDikirim />
       <ListTicketOrderSection />
@@ -23,15 +21,8 @@ const MuatanDirimPage = () => {
 const StyledMuatanDirimPage = styled.main`
   position: relative;
   /* background-color: yellow; */
+  margin-bottom: 120px;
   height: max-content;
-  .background-header {
-    background-image: ${() => `url(${IMGBgHeader})`};
-    background-position: center;
-    background-size: cover;
-    width: 100vw;
-    height: 300px;
-    margin-top: -50px;
-  }
   .header-content {
     margin-top: -250px;
     top: 0;
