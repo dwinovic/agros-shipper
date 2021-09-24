@@ -8,11 +8,11 @@
   <h3 align="center">AGROS SHIPPER</h3>
   <p align="center">Application mini test as a Front end Developer at <b>Agros Indonesia<b></p>
   <p align="center">
-    <a href="https://agros-shipper.vercel.app/">View Prototype</a>
+    <a href="https://agros-shipper.vercel.app/" target="_blank">View Prototype</a>
     ·
-    <a href="https://www.linkedin.com/in/novidwicahya/">My Linkedin</a>
+    <a href="https://www.linkedin.com/in/novidwicahya/" target="_blank">My Linkedin</a>
     ·
-    <a href="novidwicahya19@gmail.com">My Email</a>
+    <a href="novidwicahya19@gmail.com" target="_blank">My Email</a>
   </p>
 </p>
 
