@@ -31,7 +31,7 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Clone This 2 
+1. Clone This Repo
 ```sh
 git clone https://github.com/dwinovic/agros-shipper
 ```
