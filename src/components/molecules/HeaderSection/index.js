@@ -9,7 +9,7 @@ const HeaderSection = ({ className }) => {
   const pathNavigation = [
     {
       name: 'DASHBOARD',
-      path: '/dashboard',
+      path: '/',
       active: false,
     },
     {
@@ -24,7 +24,7 @@ const HeaderSection = ({ className }) => {
     },
     {
       name: 'DELIVERY ORDER AKTIF',
-      path: '/deliver-order-aktif',
+      path: '/history',
       active: true,
     },
   ];

@@ -9,8 +9,9 @@ const Breadcrumbs = ({ path, theme }) => {
     <StyledBreadcrumbs>
       <p className={`text-sm text-bold ${theme}`}>NAVIGATION :</p>
       <div className="breadcrumb-wrapper">
-        {path.map((item) => (
+        {path.map((item, index) => (
           <Link
+            key={index}
             className={`button ${path.length > 1 && 'with-next-icon'} ${
               item.active && 'current-page'
             }`}

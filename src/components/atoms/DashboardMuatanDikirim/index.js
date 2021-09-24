@@ -124,15 +124,18 @@ DashboardMuatanDikirim.propTypes = {};
 
 const StyledDashboardMuatanDikirim = styled.div`
   margin-top: -90px !important;
-  ${breakpoints.lessThan('tablet')`
-  `}
+
   .muatan-card-order {
-    flex-direction: column;
+    /* flex-direction: column; */
     .status-wrapper {
       display: flex;
       gap: 1rem;
-      width: 100%;
-      flex-wrap: wrap;
+      width: 30%;
+      flex-direction: row;
+      /* flex-wrap: wrap; */
+      ${breakpoints.lessThan('1300px')`
+        width: 100%;
+      `}
       .item {
         width: 250px;
         flex: auto;

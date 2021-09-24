@@ -18,7 +18,6 @@ const Navbar = ({ className }) => {
   const handleLogout = () => {
     console.log('Logout work!!!');
   };
-  console.log(pathname);
   return (
     <StyledNavbar collapse={collapse}>
       <div className={`content ${className}`}>

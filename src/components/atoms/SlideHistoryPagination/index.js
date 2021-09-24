@@ -9,7 +9,6 @@ import { DB_Histories } from '../../../database';
 import { breakpoints } from '../../../utils';
 
 const SlideHistoryPagination = () => {
-  // const [currentPage, setCurrentPage] = useState();
   const settings = {
     centerMode: true,
     centerPadding: '0px',
@@ -18,11 +17,7 @@ const SlideHistoryPagination = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // customPaging: function (i) {
-    //   return <Page number={i + 1} active={i + 1} onClick />;
-    // },
   };
-  // console.log(DB_Histories);
   return (
     <StyledSlideHistoryPagination>
       <Slider {...settings}>

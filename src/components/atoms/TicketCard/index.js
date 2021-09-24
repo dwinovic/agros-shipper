@@ -17,6 +17,7 @@ const TicketCard = ({
   footerColFour,
   theme,
   icon,
+  ...props
 }) => {
   const titleCol3 = {
     history: 'Kota Muat',
@@ -28,7 +29,7 @@ const TicketCard = ({
     status: 'Status',
   };
   return (
-    <StyledHistoryOrder theme={theme}>
+    <StyledHistoryOrder theme={theme} {...props}>
       <CardWrapper className="content">
         <div className="no-order">
           <div className="checklist-icon">

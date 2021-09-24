@@ -20,7 +20,7 @@ const DashboardSection = () => {
   const pathNavigation = [
     {
       name: 'DASHBOARD',
-      path: '/dashboard',
+      path: '/',
       active: true,
     },
   ];

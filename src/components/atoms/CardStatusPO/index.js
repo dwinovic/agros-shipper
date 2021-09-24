@@ -62,7 +62,7 @@ const CardStatusPO = ({
 CardStatusPO.defaultProps = {};
 
 CardStatusPO.propTypes = {
-  status: PropTypes.oneOf(['Aktif', 'Sisa']).isRequired,
+  status: PropTypes.object.isRequired,
   theme: PropTypes.string,
   icon: PropTypes.string,
   totalItem: PropTypes.number.isRequired,

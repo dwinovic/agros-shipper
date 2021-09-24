@@ -41,8 +41,12 @@ const Pagination = ({ dataPage, ...props }) => {
   return (
     <StyledPagination {...props}>
       <div className="pages">
-        {dataPage?.data.map((item) => (
-          <Page number={item.page} active={item.page === 1 && true} />
+        {dataPage?.data.map((item, index) => (
+          <Page
+            key={index}
+            number={item.page}
+            active={item.page === 1 && true}
+          />
         ))}
       </div>
       <div className="handle-button-next">
