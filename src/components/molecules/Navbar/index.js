@@ -16,7 +16,7 @@ const Navbar = ({ className }) => {
   };
 
   const handleLogout = () => {
-    console.log('Logout work!!!');
+    console.log('Yeeyy Logoutt!!!');
   };
   return (
     <StyledNavbar collapse={collapse}>
@@ -45,7 +45,7 @@ const Navbar = ({ className }) => {
             />
           </div>
           <div className="button-user">
-            <ButtonUser userName="Pramono" />
+            <ButtonUser userName="Nopik" />
             <ButtonLogout onClick={handleLogout} />
           </div>
         </div>
@@ -81,7 +81,7 @@ const Navbar = ({ className }) => {
           />
         </div>
         <div className="bottom">
-          <ButtonUser userName="Pramono" />
+          <ButtonUser userName="Nopik" />
           <ButtonLogout onClick={handleLogout} />
         </div>
       </div>
