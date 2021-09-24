@@ -8,7 +8,7 @@
   <h3 align="center">AGROS SHIPPER</h3>
 
   <p align="center">
-    <a href="https://agros-shipper.vercel.app/">View Demo</a>
+    <a href="https://agros-shipper.vercel.app/">View Prototype</a>
     ·
     <a href="https://www.linkedin.com/in/novidwicahya/">My Linkedin</a>
     ·
