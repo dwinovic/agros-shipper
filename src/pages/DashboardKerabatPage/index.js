@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import {
   DashboardSection,
@@ -9,6 +9,10 @@ import {
 import { breakpoints } from '../../utils';
 
 const DashboardKerabatPage = () => {
+  useEffect(() => {
+    document.title = 'Home | Agros Shipper';
+  }, []);
+
   return (
     <StyledDashboardKerabatPage>
       <DashboardSection />
