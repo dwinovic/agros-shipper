@@ -11,6 +11,7 @@ import {
   ICNavNotification,
 } from '../../../assets';
 import { breakpoints } from '../../../utils';
+import { Line } from '../../index';
 
 const Navbar = ({ className }) => {
   const [login, setLogin] = useState(true);
@@ -27,12 +28,15 @@ const Navbar = ({ className }) => {
             <div className="icon hover">
               <img src={ICNavHome} alt="Home" />
             </div>
+            <Line className="line" />
             <div className="icon hover">
               <img src={ICNavHistory} alt="History" />
             </div>
+            <Line className="line" />
             <div className="icon hover">
               <img src={ICNavMessage} alt="Message" />
             </div>
+            <Line className="line" />
             <div className="icon hover">
               <img src={ICNavNotification} alt="Notification" />
             </div>
@@ -70,6 +74,10 @@ const StyledNavbar = styled.nav`
   background: #ffffff 0% 0% no-repeat padding-box;
   border-bottom: 1px solid #8b8b8bae;
   margin-bottom: 35px;
+  position: fixed;
+  z-index: 9 !important;
+  width: 100%;
+  top: 0;
   .content {
     display: flex;
     justify-content: space-between;
@@ -93,10 +101,10 @@ const StyledNavbar = styled.nav`
       `}
       .button-icons {
         display: flex;
-        .icon {
+        /* .icon {
           border-right: 1px solid gray;
           margin-right: 4px;
-        }
+        } */
       }
       .button-username {
         background-color: transparent;
@@ -125,6 +133,10 @@ const StyledNavbar = styled.nav`
       button:hover {
         cursor: pointer;
         opacity: 0.9;
+      }
+      .line {
+        height: 70%;
+        margin-top: 5px;
       }
     }
     .humberger-icon {

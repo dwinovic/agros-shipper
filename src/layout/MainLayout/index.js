@@ -24,6 +24,7 @@ const StyledMainLayout = styled.div`
   height: 100%;
   left: 0;
   top: 0;
+  padding-top: 150px;
   /* ${breakpoints.lessThan('desktop')`
     background-color: yellow;
   `}

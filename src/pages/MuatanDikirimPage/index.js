@@ -33,7 +33,7 @@ const StyledMuatanDirimPage = styled.main`
     margin-top: -50px;
   }
   .header-content {
-    margin-top: -300px;
+    margin-top: -250px;
     top: 0;
     width: 100%;
     /* position: absolute; */
