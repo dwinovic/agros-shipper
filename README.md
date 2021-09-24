@@ -8,17 +8,13 @@
   <h3 align="center">AGROS SHIPPER</h3>
 
   <p align="center">
-    <a href="#">View Demo</a>
+    <a href="https://agros-shipper.vercel.app/">View Demo</a>
     ·
-    <a href="#">My Linkedin</a>
+    <a href="https://www.linkedin.com/in/novidwicahya/">My Linkedin</a>
     ·
-    <a href="#">My Email</a>
+    <a href="novidwicahya19@gmail.com">My Email</a>
   </p>
 </p>
-
-## About The Project
-
-<b>AGROS SHIPPER</b> adalah sistem terpadu satu pintu (one stop service) yang berfokus pada pelayanan jasa logistik muatan berat. Agros menawarkan mitra terlatih, efisiensi dan transparansi sistem transportasi, kemudahan akses untuk layanan pemeliharaan hingga fitur transaksi.
 
 ### Build With
 * [JavaScript](https://www.javascript.com/)
@@ -55,8 +51,12 @@ npm start
 ## Screenshots
 
 <div align="center">
-    <img width="350" src="">   
-    <img width="350" src="">
+    <img width="350" src="https://res.cloudinary.com/dnv-images/image/upload/v1632498751/image_1_bwased.png">   
+    <img width="350" src="https://res.cloudinary.com/dnv-images/image/upload/v1632498749/2_jyiitd.png">
+</div>
+<div align="center">
+    <img width="350" src="https://res.cloudinary.com/dnv-images/image/upload/v1632498746/3_sbkxa7.png">   
+    <img width="350" src="https://res.cloudinary.com/dnv-images/image/upload/v1632498743/4_xymxwp.png">
 </div>
 
 ## Contact
