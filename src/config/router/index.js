@@ -7,7 +7,7 @@ const Routes = () => {
     <Router>
       <Switch>
         <PrivateRoute path="/" exact component={DashboardKerabatPage} />
-        <PrivateRoute path="/muatan-dikirim" component={MuatanDirimPage} />
+        <PrivateRoute path="/history" component={MuatanDirimPage} />
       </Switch>
     </Router>
   );
