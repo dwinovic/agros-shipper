@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { TicketCard } from '..';
 import { ICTerkirim } from '../../../assets';
 import { DB_Histories } from '../../../database';
+import { breakpoints } from '../../../utils';
 
 const SlideHistoryPagination = () => {
   // const [currentPage, setCurrentPage] = useState();
@@ -21,9 +22,9 @@ const SlideHistoryPagination = () => {
     //   return <Page number={i + 1} active={i + 1} onClick />;
     // },
   };
-  console.log(DB_Histories);
+  // console.log(DB_Histories);
   return (
-    <StyledSlideHistoryPagination className="">
+    <StyledSlideHistoryPagination>
       <Slider {...settings}>
         {DB_Histories.data.map((page) => (
           <div
@@ -49,41 +50,41 @@ const SlideHistoryPagination = () => {
           </div>
         ))}
       </Slider>
-      <ul className="slick-dots">
-        <li>1</li>
-      </ul>
     </StyledSlideHistoryPagination>
   );
 };
 
 const StyledSlideHistoryPagination = styled.div`
   width: 100vw;
+  margin: 32px 0;
   .item-wrapper {
     width: max-content !important;
     display: flex !important;
     flex-direction: column;
     gap: 1rem;
-    &.first {
+    width: 100vw;
+    /* &.first {
       padding-left: calc((100vw - 1500px) / 2);
-      /* width: 500px; */
-      /* height: 600px; */
-    }
+    } */
     .item {
-      /* width: 100vw; */
       width: 1500px;
-      /* background-color: yellow; */
+      ${breakpoints.lessThan('desktop')` 
+          width: 90vw; 
+      `}
     }
   }
   /* .slick-slide .slick-active .slick-center .slick-current */
   .slick-slide {
-    /* background-color: yellow; */
-    width: max-content !important;
-    /* transform: translateX(calc(((100vw - 1500px - 2rem)))); */
+    /* width: max-content !important; */
+    display: flex !important;
   }
   .slick-current {
-    /* margin: 0 2rem; */
     margin-right: 2rem;
-    /* background-color: cyan; */
+    margin-left: calc((100vw - 1500px) / 2);
+    ${breakpoints.lessThan('desktop')` 
+      margin-left: calc((100vw - 90vw) / 2);
+      margin-right: 10px; 
+    `}
   }
   .slick-active {
     width: max-content !important;

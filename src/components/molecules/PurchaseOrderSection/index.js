@@ -15,38 +15,42 @@ const PurchaseOrderSection = () => {
             ton={200000}
             percent={45}
           >
-            <CardStatusPO
-              icon={ICCarActive}
-              status={
-                <>
-                  <span className="text-bold">PO</span> Aktif
-                </>
-              }
-              description={
-                <>
-                  Purchase order yang <br />
-                  <span className="text-bold">sedang berjalan.</span>
-                </>
-              }
-              theme="green"
-              totalItem={400}
-            />
-            <CardStatusPO
-              icon={ICCarOrange}
-              status={
-                <>
-                  <span className="text-bold">PO</span> Sisa
-                </>
-              }
-              description={
-                <>
-                  Purchase order yang <br />
-                  <span className="text-bold">belum berjalan.</span>
-                </>
-              }
-              theme="orange"
-              totalItem={200}
-            />
+            <div className="item-status">
+              <CardStatusPO
+                icon={ICCarActive}
+                status={
+                  <>
+                    <span className="text-bold">PO</span> Aktif
+                  </>
+                }
+                description={
+                  <>
+                    Purchase order yang <br />
+                    <span className="text-bold">sedang berjalan.</span>
+                  </>
+                }
+                theme="green"
+                totalItem={400}
+              />
+            </div>
+            <div className="item-status">
+              <CardStatusPO
+                icon={ICCarOrange}
+                status={
+                  <>
+                    <span className="text-bold">PO</span> Sisa
+                  </>
+                }
+                description={
+                  <>
+                    Purchase order yang <br />
+                    <span className="text-bold">belum berjalan.</span>
+                  </>
+                }
+                theme="orange"
+                totalItem={200}
+              />
+            </div>
           </CardOrderDetail>
         </div>
         <div className="order-muatan">
@@ -62,11 +66,16 @@ PurchaseOrderSection.defaultProps = {};
 PurchaseOrderSection.propTypes = {};
 
 const StyledPurchaseOrderSection = styled.section`
-  margin-top: 100px;
   .body-order-section {
     display: flex;
     flex-direction: column;
     gap: 18px;
+    .order-detail {
+      .item-status {
+        flex: auto;
+        width: 100%;
+      }
+    }
   }
 `;
 

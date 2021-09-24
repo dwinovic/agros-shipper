@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { CardWrapper } from '..';
 import { IMGKritikDanSaran } from '../../../assets';
+import { breakpoints } from '../../../utils';
 
 const CardMenu = ({ withImage, title, onClick, description, footer, icon }) => {
   return (
@@ -102,6 +103,9 @@ const StyledCardMenu = styled.div`
       .left {
         width: 50%;
         height: 100%;
+        ${breakpoints.lessThan('mobile')`
+          width: 100%;
+        `}
       }
       .right {
         width: 60%;
@@ -109,6 +113,12 @@ const StyledCardMenu = styled.div`
         position: absolute;
         right: 30px;
         bottom: 0;
+        ${breakpoints.lessThan('mobile')`
+          opacity: .3;
+          width: 100%;
+          right: 0;
+          text-align: center;
+        `}
       }
     }
     &:hover {

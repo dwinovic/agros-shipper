@@ -73,6 +73,7 @@ const StyledCardStatusPO = styled.div`
   height: 100%;
   display: flex;
   .content-card-status {
+    flex: 1;
     background-color: ${({ theme }) => {
       if (theme === 'green') return '#eff8f1';
       if (theme === 'orange') return '#fff3d9';

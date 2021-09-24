@@ -35,7 +35,6 @@ const LayananSection = () => {
           </svg>
         </div>
       </div>
-      {/* <SlidePelayanan /> */}
       <CarouselPelayanan />
     </StyledLayananSection>
   );
