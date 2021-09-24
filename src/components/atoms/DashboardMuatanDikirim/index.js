@@ -124,9 +124,7 @@ DashboardMuatanDikirim.propTypes = {};
 
 const StyledDashboardMuatanDikirim = styled.div`
   margin-top: -90px !important;
-
   .muatan-card-order {
-    /* flex-direction: column; */
     .status-wrapper {
       display: flex;
       gap: 1rem;
