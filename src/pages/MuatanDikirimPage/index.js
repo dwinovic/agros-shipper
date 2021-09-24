@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import {
   DashboardMuatanDikirim,
@@ -8,6 +8,9 @@ import {
 } from '../../components';
 
 const MuatanDirimPage = () => {
+  useEffect(() => {
+    document.title = 'History | Agros Shipper';
+  }, []);
   return (
     <StyledMuatanDirimPage>
       <HeaderSection className="header-content" />

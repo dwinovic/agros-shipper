@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Link, useHistory } from 'react-router-dom';
 const PageNotFound = () => {
   const history = useHistory();
+  useEffect(() => {
+    document.title = 'Page Not Found | Agros Shipper';
+  }, []);
   return (
     <StyledPageNotFound>
       <div className="info">
