@@ -18,8 +18,13 @@ MainLayout.propTypes = {
 };
 
 const StyledMainLayout = styled.div`
-  width: 100vw;
   background-color: #f8f8f8;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding-top: 180px;
   /* ${breakpoints.lessThan('desktop')`
     background-color: yellow;
   `}
@@ -44,7 +49,8 @@ const StyledMainLayout = styled.div`
       width: 90vw; 
     `}
     ${breakpoints.lessThan('tablet')`
-      width: 95vw; 
+      width: 100vw; 
+      padding: 0 16px;
     `}
   }
   .hover {

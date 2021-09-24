@@ -62,7 +62,7 @@ const CardStatusPO = ({
 CardStatusPO.defaultProps = {};
 
 CardStatusPO.propTypes = {
-  status: PropTypes.oneOf(['Aktif', 'Sisa']).isRequired,
+  status: PropTypes.object.isRequired,
   theme: PropTypes.string,
   icon: PropTypes.string,
   totalItem: PropTypes.number.isRequired,
@@ -73,6 +73,7 @@ const StyledCardStatusPO = styled.div`
   height: 100%;
   display: flex;
   .content-card-status {
+    flex: 1;
     background-color: ${({ theme }) => {
       if (theme === 'green') return '#eff8f1';
       if (theme === 'orange') return '#fff3d9';

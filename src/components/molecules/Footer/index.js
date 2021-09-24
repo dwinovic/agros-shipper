@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ICLogoFooter, IMGBGFooter } from '../../../assets';
+import { breakpoints } from '../../../utils';
 
 const Footer = () => {
   return (
@@ -31,9 +32,16 @@ const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   height: 120px;
+  ${breakpoints.lessThan('mobile')`
+    height: max-content;
+    padding: 16px 0;
+  `}
   .container {
     display: flex;
     justify-content: space-between;
+    ${breakpoints.lessThan('mobile')`
+      flex-direction: column;
+    `}
     p {
       color: #ffffff;
       text-align: center;
@@ -46,6 +54,10 @@ const StyledFooter = styled.footer`
       display: flex;
       align-items: center;
       gap: 26px;
+      ${breakpoints.lessThan('mobile')`
+        flex-direction: column;
+        gap: 16px;
+      `}
       .logo-wrapper {
         height: 20px;
         img {
@@ -61,6 +73,10 @@ const StyledFooter = styled.footer`
       display: flex;
       align-items: center;
       gap: 56px;
+      ${breakpoints.lessThan('mobile')`
+        justify-content: space-between;
+        margin-top: 16px;
+      `}
     }
   }
 `;

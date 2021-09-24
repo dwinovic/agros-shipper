@@ -2,12 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { CardWrapper } from '..';
-import { numberFormater } from '../../../utils';
+import { breakpoints, numberFormater } from '../../../utils';
 
-const CardOrderDetail = ({ children, idPurchase, percent, itemName, ton }) => {
+const CardOrderDetail = ({
+  children,
+  idPurchase,
+  percent,
+  itemName,
+  ton,
+  className,
+}) => {
   return (
     <StyledCardOrderDetail percent={percent}>
-      <CardWrapper className="content" hoverDisabled>
+      <CardWrapper className={`content ${className}`} hoverDisabled>
         <div className="detail-info">
           <p className="text-md">Nomor Purchase Order</p>
           <h3 className="heading-card-md">{idPurchase}</h3>
@@ -56,12 +63,16 @@ const StyledCardOrderDetail = styled.div`
     display: flex;
     gap: 32px;
     width: 100%;
-    align-items: center;
-    justify-content: center;
+    ${breakpoints.lessThan('laptop')`
+      flex-wrap: wrap; 
+    `}
     .detail-info {
-      width: 70%;
+      /* width: 70%; */
       flex: 1;
       flex: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
       .heading-card-md {
         margin: 10px 0;
       }
@@ -105,6 +116,12 @@ const StyledCardOrderDetail = styled.div`
     .more-info {
       display: flex;
       gap: 16px;
+      ${breakpoints.lessThan('laptop')`
+        flex: 1;
+      `}
+      ${breakpoints.lessThan('mobile')`
+        flex-direction: column;
+      `}
     }
   }
 `;

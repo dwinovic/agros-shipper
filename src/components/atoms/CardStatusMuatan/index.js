@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { CardWrapper, ItemStatusMuatan } from '..';
 import { ICDikirim, ICTerkirim, ICTertunda } from '../../../assets';
+import { breakpoints } from '../../../utils';
 
 const StatusMuatan = ({ status }) => {
   return (
@@ -80,10 +81,16 @@ const StyledStatusMuatan = styled.div`
     width: 100%;
     display: flex;
     gap: 16px;
+    ${breakpoints.lessThan('tablet')`
+      flex-direction: column;
+    `}
     .left-status-muatan {
       width: 30%;
       display: flex;
       flex-direction: column;
+      ${breakpoints.lessThan('tablet')`
+        width: 100%;
+      `}
       .heading-card-md {
         margin-bottom: 1rem;
       }
@@ -96,11 +103,18 @@ const StyledStatusMuatan = styled.div`
           display: flex;
           flex-direction: column;
           gap: 1rem;
+          ${breakpoints.lessThan('tablet')`
+            flex-direction: row;
+            justify-content: space-around;
+          `}
           .icon {
             display: flex;
             align-items: center;
             gap: 1rem;
             opacity: 0.5;
+            ${breakpoints.lessThan('tablet')`
+              flex-direction: column;
+            `}
             img {
               width: 40px;
             }
@@ -118,16 +132,25 @@ const StyledStatusMuatan = styled.div`
         gap: 50px;
         align-items: center;
         color: #4c9f70;
+        ${breakpoints.lessThan('tablet')` 
+          margin-top: 24px; 
+          justify-content: center;
+        `}
       }
     }
     .right-status-muatan {
-      background-color: yellow;
       flex: 1;
       .list-status {
         width: 100%;
         display: grid;
         grid-template-columns: 50% 50%;
         gap: 1rem;
+        ${breakpoints.lessThan('tablet')`
+          padding: 10px;
+        `}
+        ${breakpoints.lessThan('mobile')`
+          grid-template-columns: 100%;
+        `}
       }
     }
   }

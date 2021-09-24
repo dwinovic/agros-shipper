@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { CardWrapper, Line } from '..';
 import { ICNextRight } from '../../../assets';
+import { breakpoints } from '../../../utils';
 
 const TicketCard = ({
   typeTicket,
@@ -16,6 +17,7 @@ const TicketCard = ({
   footerColFour,
   theme,
   icon,
+  ...props
 }) => {
   const titleCol3 = {
     history: 'Kota Muat',
@@ -27,7 +29,7 @@ const TicketCard = ({
     status: 'Status',
   };
   return (
-    <StyledHistoryOrder theme={theme}>
+    <StyledHistoryOrder theme={theme} {...props}>
       <CardWrapper className="content">
         <div className="no-order">
           <div className="checklist-icon">
@@ -39,13 +41,13 @@ const TicketCard = ({
             <p className="text-md">Total {totalRitase} Ritase</p>
           </div>
         </div>
-        <Line />
+        <Line className="line" />
         <div className="nama-barang">
           <p className="text-md">Nama Barang</p>
           <p className="text-lg text-extra-bold">{namaBarang}</p>
           <p className="text-md">{beratBarang} Ton</p>
         </div>
-        <Line />
+        <Line className="line" />
         <div className="kota-masuk">
           <p className="text-md">{titleCol3[typeTicket]}</p>
           <p
@@ -57,7 +59,7 @@ const TicketCard = ({
           </p>
           <p className="text-md">{footerColThree}</p>
         </div>
-        <Line />
+        <Line className="line" />
         <div className="kota-bongkar">
           <div>
             <p className="text-md">{titleCol4[typeTicket]}</p>
@@ -78,6 +80,7 @@ const TicketCard = ({
     </StyledHistoryOrder>
   );
 };
+
 TicketCard.defaultProps = {
   noOrder: '000000 0000 0000',
   totalRitase: 0,
@@ -120,11 +123,16 @@ const StyledHistoryOrder = styled.section`
     padding: 16px;
     background: transparent 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
-    /* justify-content: space-between; */
+    ${breakpoints.lessThan('tablet')`
+      flex-wrap: wrap;
+    `}
     .no-order {
       display: flex;
       flex: auto;
       gap: 16px;
+      ${breakpoints.lessThan('tablet')`
+        width: 100%;
+      `}
       .checklist-icon {
         width: 60px;
         img {
@@ -140,18 +148,27 @@ const StyledHistoryOrder = styled.section`
     }
     .nama-barang {
       flex: auto;
-
       display: flex;
       flex-direction: column;
       gap: 2px;
+      ${breakpoints.lessThan('tablet')`
+        width: 25%;
+      `}
     }
     .kota-masuk {
       flex: auto;
+      ${breakpoints.lessThan('tablet')`
+        width: 25%;
+      `}
     }
     .kota-bongkar {
       display: flex;
       flex: auto;
       justify-content: space-between;
+      ${breakpoints.lessThan('tablet')`
+        width: 50%;
+        justify-content: space-evenly;
+      `}
       .button-next {
         border-radius: 7px;
         width: 60px;
@@ -163,6 +180,8 @@ const StyledHistoryOrder = styled.section`
         }
       }
     }
+  }
+  .line {
   }
 `;
 export default TicketCard;

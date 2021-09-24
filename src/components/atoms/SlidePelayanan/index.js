@@ -4,9 +4,15 @@ import styled from 'styled-components';
 import { CardWrapper } from '..';
 import { IMGDriver, IMGTransporter } from '../../../assets';
 
-export const ServiceItem = ({ title, description, link, bgImage }) => {
+export const ServiceItem = ({
+  title,
+  description,
+  link,
+  bgImage,
+  ...props
+}) => {
   return (
-    <StyledServiceItem className="service" bgImage={bgImage}>
+    <StyledServiceItem className="service" bgImage={bgImage} {...props}>
       <div className="header-service">
         <h3 className="heading-card-md">{title}</h3>
         <p className="text-md">{description}</p>
@@ -63,7 +69,6 @@ const StyledSlidePelayanan = styled.div`
 `;
 
 const StyledServiceItem = styled(CardWrapper)`
-  background-color: pink;
   /* width: 700px; */
   height: 100%;
   width: 100%;

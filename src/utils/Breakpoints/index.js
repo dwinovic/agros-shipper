@@ -5,5 +5,5 @@ export const breakpoints = generateMedia({
   laptop: '1280px',
   tablet: '800px',
   mobile: '481px',
-  minimobile: '320px',
+  minimobile: '420px',
 });

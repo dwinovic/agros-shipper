@@ -14,12 +14,13 @@ import {
   ICPaperCheck,
   ICPaperOrange,
 } from '../../../assets';
+import { breakpoints } from '../../../utils';
 
 const DashboardSection = () => {
   const pathNavigation = [
     {
       name: 'DASHBOARD',
-      path: '/dashboard',
+      path: '/',
       active: true,
     },
   ];
@@ -30,17 +31,17 @@ const DashboardSection = () => {
       <Breadcrumbs path={pathNavigation} />
       <div className="menu-dashboard">
         <div className="row">
-          <div className="medium35">
+          <div className="medium-lg-card">
             <CardProfileCompany
               companyName="PT. ANTAR GLOBAL PROSPERO"
               phone="(31) 3974550"
               email="Antarglobalprospero@gmail.com"
             />
           </div>
-          <div className="medium35">
+          <div className="medium-lg-card">
             <CardAddPurchaseOrder />
           </div>
-          <div className="small">
+          <div className="small-card">
             <CardStatusPO
               icon={ICPaperCheck}
               status={
@@ -58,7 +59,7 @@ const DashboardSection = () => {
               totalItem={100}
             />
           </div>
-          <div className="small">
+          <div className="small-card">
             <CardStatusPO
               icon={ICPaperOrange}
               status={
@@ -78,7 +79,7 @@ const DashboardSection = () => {
           </div>
         </div>
         <div className="row">
-          <div className="medium25">
+          <div className="medium-md-card">
             <CardMenu
               icon={ICMessagerGreen}
               title={
@@ -100,7 +101,7 @@ const DashboardSection = () => {
               }
             />
           </div>
-          <div className="medium25">
+          <div className="medium-md-card">
             <CardMenu
               icon={ICBoxPay}
               title={
@@ -142,19 +143,44 @@ const StyledDashboardSection = styled.section`
       align-items: stretch;
       margin-bottom: 20px;
       width: 100%;
-      .small {
+      ${breakpoints.lessThan('laptop')` 
+        flex-wrap: wrap;
+      `}
+      .small-card {
         width: 15%;
+        ${breakpoints.lessThan('laptop')`
+          flex: auto; 
+        `}
+        ${breakpoints.lessThan('minimobile')`
+          flex: 1; 
+          width: 100%;
+        `}
       }
-      .medium25 {
+      .medium-md-card {
         width: 25%;
+        ${breakpoints.lessThan('laptop')`
+          flex: auto;  
+        `}
+        ${breakpoints.lessThan('minimobile')`
+          width: 100%; 
+        `}
       }
-      .medium35 {
+      .medium-lg-card {
         width: 30%;
         flex: 1;
+        ${breakpoints.lessThan('laptop')`
+          width: 50%; 
+        `}
+        ${breakpoints.lessThan('tablet')`
+          width: 100%; 
+        `}
       }
       .large {
         flex: 1;
         width: 0;
+        ${breakpoints.lessThan('laptop')`
+          width: 100%; 
+        `}
       }
     }
   }

@@ -4,13 +4,11 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import styled from 'styled-components';
 import { IMGDriver, IMGTransporter } from '../../../assets';
+import { breakpoints } from '../../../utils';
 import { ServiceItem } from '../SlidePelayanan';
 
 const CarouselPelayanan = () => {
   const settings = {
-    // dots: true,
-    // className: 'center',
-    // centerMode: true,
     infinite: true,
     className: 'slide',
     slidesToShow: 2,
@@ -18,16 +16,32 @@ const CarouselPelayanan = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <StyledSlidePelayanan className="">
       <Slider {...settings} className="slider">
-        {/* <div className="blank">a</div> */}
         <div className="item">
           <ServiceItem
             title="AGROS DRIVER"
             description="Agros menawarkan keleluasaan untuk memilih proyek sehinga peningkatan
-          pendapatan bukan lagi jadi impian"
+            pendapatan bukan lagi jadi impian"
             bgImage={IMGDriver}
           />
         </div>
@@ -42,7 +56,7 @@ const CarouselPelayanan = () => {
           <ServiceItem
             title="AGROS DRIVER"
             description="Agros menawarkan keleluasaan untuk memilih proyek sehinga peningkatan
-          pendapatan bukan lagi jadi impian"
+            pendapatan bukan lagi jadi impian"
             bgImage={IMGDriver}
           />
         </div>
@@ -54,36 +68,26 @@ const CarouselPelayanan = () => {
 const StyledSlidePelayanan = styled.div`
   margin-top: 30px;
   height: 260px;
-  .slick-slider,
+  /* .slick-slider,
   .slidem .slick-initialized {
     height: 100%;
+  } */
+  /* .slick-track {
+  } */
+  .slick-active {
+    margin: 0 16px;
   }
-  .slider {
-    /* background-color: cyan; */
-  }
-  .slick-list {
-    /* background-color: cyan; */
-    /* display: flex !important; */
-    .slick-track {
-      /* &::before,
-      &::after {
-        content: ' ';
-        display: inline-block;
-        width: calc((100vw - 1500px) / 2);
-        height: 100%;
-      } */
-    }
-    /* .blank {
-      background-color: cyan;
-      width: calc((100vw - 1500px) / 2) !important;
-      height: 100%;
-      display: block !important;
-    } */
-    .item {
-      /* max-width: 800px; */
-      height: 260px;
+  .slick-current {
+    margin-left: calc((100vw - 1500px) / 2);
+    ${breakpoints.lessThan('tablet')`
+      margin-left: 0;
       padding: 0 16px;
-    }
+    `}
+  }
+  .item {
+    height: 260px;
+    /* margin-right: 16px !important; */
   }
 `;
+
 export default CarouselPelayanan;

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { ICNextRight } from '../../../assets';
+import { breakpoints } from '../../../utils';
 
 export const Page = ({
   active,
@@ -40,8 +41,12 @@ const Pagination = ({ dataPage, ...props }) => {
   return (
     <StyledPagination {...props}>
       <div className="pages">
-        {dataPage?.data.map((item) => (
-          <Page number={item.page} active={item.page === 1 && true} />
+        {dataPage?.data.map((item, index) => (
+          <Page
+            key={index}
+            number={item.page}
+            active={item.page === 1 && true}
+          />
         ))}
       </div>
       <div className="handle-button-next">
@@ -63,6 +68,9 @@ Pagination.propTypes = {};
 const StyledPagination = styled.section`
   display: flex;
   gap: 24px;
+  ${breakpoints.lessThan('500px')`
+    flex-direction: column;
+  `}
   .pages {
     display: flex;
     gap: 1rem;
@@ -70,12 +78,19 @@ const StyledPagination = styled.section`
   .handle-button-next {
     display: flex;
     gap: 1rem;
+    ${breakpoints.lessThan('500px')` 
+      justify-content: space-between;
+    `}
     .btn {
       width: 60px;
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
+      ${breakpoints.lessThan('500px')`
+        height: 40px; 
+        width: 40px;
+      `}
       &.prev {
         transform: rotate(180deg);
       }

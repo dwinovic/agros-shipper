@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { breakpoints } from '../../../utils';
 
 const CardWrapper = ({ children, className, hoverDisabled }) => {
   return (
@@ -20,7 +21,9 @@ const StyledCardWrapper = styled.div`
   border-radius: 10px;
   padding: 30px;
   width: max-content;
-  /* height: max-content; */
+  ${breakpoints.lessThan('tablet')`
+    padding: 16px;
+  `}
   &:hover {
     box-shadow: ${({ hoverDisabled }) =>
       hoverDisabled ? 'none' : '0px 0px 20px #00000029'};
