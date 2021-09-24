@@ -15,6 +15,7 @@ import {
   ICPaperOrange,
 } from '../../../assets';
 import { breakpoints } from '../../../utils';
+import Fade from 'react-reveal/Fade';
 
 const DashboardSection = () => {
   const pathNavigation = [
@@ -30,101 +31,106 @@ const DashboardSection = () => {
       <h1 className="heading-section">Dashboard Kerabat</h1>
       <Breadcrumbs path={pathNavigation} />
       <div className="menu-dashboard">
-        <div className="row">
-          <div className="medium-lg-card">
-            <CardProfileCompany
-              companyName="PT. ANTAR GLOBAL PROSPERO"
-              phone="(31) 3974550"
-              email="Antarglobalprospero@gmail.com"
-            />
+        <Fade left cascade>
+          <div className="row">
+            <div className="medium-lg-card">
+              <CardProfileCompany
+                companyName="PT. ANTAR GLOBAL PROSPERO"
+                phone="(31) 3974550"
+                email="Antarglobalprospero@gmail.com"
+              />
+            </div>
+            <div className="medium-lg-card">
+              <CardAddPurchaseOrder />
+            </div>
+            <div className="small-card">
+              <CardStatusPO
+                icon={ICPaperCheck}
+                status={
+                  <>
+                    <span className="text-bold">PO</span> Aktif
+                  </>
+                }
+                description={
+                  <>
+                    Purchase order yang{' '}
+                    <span className="text-bold">sedang berjalan.</span>
+                  </>
+                }
+                theme="green"
+                totalItem={100}
+              />
+            </div>
+            <div className="small-card">
+              <CardStatusPO
+                icon={ICPaperOrange}
+                status={
+                  <>
+                    <span className="text-bold">PO</span> Aktif
+                  </>
+                }
+                description={
+                  <>
+                    Purchase order yang{' '}
+                    <span className="text-bold">belum berjalan.</span>
+                  </>
+                }
+                theme="orange"
+                totalItem={10}
+              />
+            </div>
           </div>
-          <div className="medium-lg-card">
-            <CardAddPurchaseOrder />
+        </Fade>
+        <Fade left cascade>
+          <div className="row">
+            <div className="medium-md-card">
+              <CardMenu
+                icon={ICMessagerGreen}
+                title={
+                  <>
+                    <span className="text-bold">Agros</span> Messager
+                  </>
+                }
+                description={
+                  <>
+                    Interaksi eksklusif{' '}
+                    <span className="text-bold">1-ON-1</span> bersama Agros
+                    Sales / Admin sesuai dengan Office Hours.
+                  </>
+                }
+                onClick={() => {}}
+                footer={
+                  <span>
+                    <span className="text-bold">MON - FRI</span> 09.00 - 17.00
+                  </span>
+                }
+              />
+            </div>
+            <div className="medium-md-card">
+              <CardMenu
+                icon={ICBoxPay}
+                title={
+                  <>
+                    <span className="text-bold">Agros</span> Pay
+                  </>
+                }
+                description="Halaman pembayaran eksklusif yang menawarkan kemudahan untuk muatan Anda."
+                onClick={() => {}}
+                footer="Lihat Tagihan Anda"
+              />
+            </div>
+            <div className="large">
+              <CardMenu
+                withImage
+                icon={ICKritik}
+                title="Kritik dan Saran"
+                description="Agros team sangat terbuka dengan kritik dan saran Anda demi kenyamanan Anda."
+                onClick={() => {}}
+                footer="Masukan Kritik dan Saran"
+              />
+            </div>
           </div>
-          <div className="small-card">
-            <CardStatusPO
-              icon={ICPaperCheck}
-              status={
-                <>
-                  <span className="text-bold">PO</span> Aktif
-                </>
-              }
-              description={
-                <>
-                  Purchase order yang{' '}
-                  <span className="text-bold">sedang berjalan.</span>
-                </>
-              }
-              theme="green"
-              totalItem={100}
-            />
-          </div>
-          <div className="small-card">
-            <CardStatusPO
-              icon={ICPaperOrange}
-              status={
-                <>
-                  <span className="text-bold">PO</span> Aktif
-                </>
-              }
-              description={
-                <>
-                  Purchase order yang{' '}
-                  <span className="text-bold">belum berjalan.</span>
-                </>
-              }
-              theme="orange"
-              totalItem={10}
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="medium-md-card">
-            <CardMenu
-              icon={ICMessagerGreen}
-              title={
-                <>
-                  <span className="text-bold">Agros</span> Messager
-                </>
-              }
-              description={
-                <>
-                  Interaksi eksklusif <span className="text-bold">1-ON-1</span>{' '}
-                  bersama Agros Sales / Admin sesuai dengan Office Hours.
-                </>
-              }
-              onClick={() => {}}
-              footer={
-                <span>
-                  <span className="text-bold">MON - FRI</span> 09.00 - 17.00
-                </span>
-              }
-            />
-          </div>
-          <div className="medium-md-card">
-            <CardMenu
-              icon={ICBoxPay}
-              title={
-                <>
-                  <span className="text-bold">Agros</span> Pay
-                </>
-              }
-              description="Halaman pembayaran eksklusif yang menawarkan kemudahan untuk muatan Anda."
-              onClick={() => {}}
-              footer="Lihat Tagihan Anda"
-            />
-          </div>
-          <div className="large">
-            <CardMenu
-              withImage
-              icon={ICKritik}
-              title="Kritik dan Saran"
-              description="Agros team sangat terbuka dengan kritik dan saran Anda demi kenyamanan Anda."
-              onClick={() => {}}
-              footer="Masukan Kritik dan Saran"
-            />
-          </div>
-        </div>
+        </Fade>
       </div>
     </StyledDashboardSection>
   );
