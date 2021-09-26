@@ -51,12 +51,12 @@ npm start
 ## Screenshots
 
 <div align="center">
-    <img width="350" src="https://res.cloudinary.com/dnv-images/image/upload/v1632498751/image_1_bwased.png">   
-    <img width="350" src="https://res.cloudinary.com/dnv-images/image/upload/v1632498749/2_jyiitd.png">
+    <img width="350" src="https://res.cloudinary.com/dnv-images/image/upload/v1632616593/Agros_01_io2tds.png">   
+    <img width="350" src="https://res.cloudinary.com/dnv-images/image/upload/v1632616596/Agros_02_ba5i4n.png">
 </div>
 <div align="center">
-    <img width="350" src="https://res.cloudinary.com/dnv-images/image/upload/v1632498746/3_sbkxa7.png">   
-    <img width="350" src="https://res.cloudinary.com/dnv-images/image/upload/v1632498743/4_xymxwp.png">
+    <img width="350" src="https://res.cloudinary.com/dnv-images/image/upload/v1632616598/Agros_03_zbxq00.png">   
+    <img width="350" src="https://res.cloudinary.com/dnv-images/image/upload/v1632616599/Agros_04_ao5cxw.png">
 </div>
 
 ## Contact
